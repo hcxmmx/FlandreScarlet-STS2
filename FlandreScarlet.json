@@ -1,0 +1,12 @@
+{
+  "id": "FlandreScarlet",
+  "name": "芙兰朵露外观 Mod",
+  "author": "Hcxmmx",
+  "description": "将铁甲战士的战斗外观替换为《东方Project》的芙兰朵露·斯卡蕾特。",
+  "version": "0.1.0",
+  "min_game_version": "0.111.0",
+  "has_pck": true,
+  "has_dll": true,
+  "dependencies": [],
+  "affects_gameplay": false
+}

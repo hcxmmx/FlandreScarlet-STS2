@@ -1,0 +1,108 @@
+[gd_resource type="Animation" format=3]
+
+[resource]
+resource_name = "HeavyDash"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.74),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/2/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:visible")
+tracks/3/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/DashBody:visible")
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.74),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/DashBody:modulate")
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.64, 0.74),
+"transitions": PackedFloat32Array(1, 0.6, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationRoot:position")
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.14, 0.18, 0.45, 0.6, 0.74, 0.9),
+"transitions": PackedFloat32Array(0.6, 1.8, 3.4, 0.65, 0.35, 0.6, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-12, 2), Vector2(-20, 4), Vector2(72, -4), Vector2(78, -6), Vector2(18, -1), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationRoot:scale")
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.14, 0.18, 0.45, 0.6, 0.73, 0.74, 0.9),
+"transitions": PackedFloat32Array(0.65, 1.6, 3, 1, 0.35, 0.6, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.98, 1.03), Vector2(0.92, 1.08), Vector2(1.18, 1.13), Vector2(1.18, 1.13), Vector2(1.1, 1.07), Vector2(1.1, 1.07), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimationRoot:rotation")
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.14, 0.18, 0.45, 0.6, 0.74, 0.9),
+"transitions": PackedFloat32Array(0.65, 1.6, 3, 1, 0.35, 0.6, 1, 1),
+"update": 0,
+"values": [0.0, -0.0174533, -0.0349066, 0.0261799, 0.0261799, 0.00872665, 0.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/DashEffect:visible")
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.64),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/DashEffect:position")
+tracks/10/keys = {
+"times": PackedFloat32Array(0.1, 0.18, 0.42, 0.64),
+"transitions": PackedFloat32Array(2.8, 0.65, 0.5, 1),
+"update": 0,
+"values": [Vector2(-60, -42), Vector2(-82, -30), Vector2(-125, -18), Vector2(-150, -12)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/DashEffect:scale")
+tracks/11/keys = {
+"times": PackedFloat32Array(0.1, 0.18, 0.42, 0.64),
+"transitions": PackedFloat32Array(3, 0.7, 0.55, 1),
+"update": 0,
+"values": [Vector2(0.08, 0.08), Vector2(0.16, 0.16), Vector2(0.26, 0.26), Vector2(0.3, 0.3)]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/DashEffect:rotation")
+tracks/12/keys = {
+"times": PackedFloat32Array(0.1, 0.42, 0.64),
+"transitions": PackedFloat32Array(0.7, 0.6, 1),
+"update": 0,
+"values": [-0.0523599, 0.0, 0.0523599]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("AnimationRoot/FacingCorrection/DashEffect:modulate")
+tracks/13/keys = {
+"times": PackedFloat32Array(0.1, 0.16, 0.32, 0.64),
+"transitions": PackedFloat32Array(3, 1, 0.45, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.78), Color(1, 1, 1, 0)]
+}

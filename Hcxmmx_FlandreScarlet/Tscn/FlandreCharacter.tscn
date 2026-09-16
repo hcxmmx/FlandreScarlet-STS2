@@ -1,0 +1,2700 @@
+[gd_scene load_steps=84 format=3 uid="uid://vxmib21hfh1p"]
+
+[ext_resource type="Texture2D" uid="uid://jpyjhrwf7efg" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Idle/idle_01.png" id="1_idle_01"]
+[ext_resource type="Texture2D" uid="uid://c4l5bak3j8kxo" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Idle/idle_02.png" id="2_idle_02"]
+[ext_resource type="Texture2D" uid="uid://cobs7mgmywgua" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Idle/idle_03.png" id="3_idle_03"]
+[ext_resource type="Texture2D" uid="uid://cgnl4y5fer47a" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Idle/idle_04.png" id="4_idle_04"]
+[ext_resource type="Texture2D" uid="uid://s1l2e2rs6o7w" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Attack/attack_01.png" id="5_attack"]
+[ext_resource type="Texture2D" uid="uid://brvwqast38h3b" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttack/heavy_attack_01.png" id="6_heavy"]
+[ext_resource type="Texture2D" uid="uid://ckofsbcocofuj" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Cast/cast_01.png" id="7_cast"]
+[ext_resource type="Texture2D" uid="uid://drb4hvvh2xpik" path="res://Hcxmmx_FlandreScarlet/Assets/Character/PowerUp/power_up_01.png" id="8_power_up"]
+[ext_resource type="Texture2D" uid="uid://d2qiow1hqrhmu" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Hit/hit_01.png" id="9_hit"]
+[ext_resource type="Texture2D" uid="uid://b8cn8sq5ap2oo" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Dead/dead_01.png" id="10_dead"]
+[ext_resource type="Script" uid="uid://cy677kdxpuray" path="res://Hcxmmx_FlandreScarlet/Scripts/FlandreController.cs" id="11_controller"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/Attack_03.tres" id="12_attack_03_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/Attack_04.tres" id="13_attack_04_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/SwordAttack_03.tres" id="14_sword_03_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/SwordAttack_05.tres" id="15_sword_05_animation"]
+[ext_resource type="Texture2D" uid="uid://bwhenjse6ajx" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Shatter/heavy_shatter_body.png" id="16_shatter_body"]
+[ext_resource type="Texture2D" uid="uid://b01jdl03fmt6d" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Shatter/heavy_shatter_vfx.png" id="17_shatter_vfx"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HeavyShatter.tres" id="18_shatter_animation"]
+[ext_resource type="Texture2D" uid="uid://crm1vskmunvbf" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Dash/heavy_dash_body.png" id="19_dash_body"]
+[ext_resource type="Texture2D" uid="uid://cli30bnnbuqkp" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Dash/heavy_dash_vfx.png" id="20_dash_vfx"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HeavyDash.tres" id="21_dash_animation"]
+[ext_resource type="Texture2D" uid="uid://doyqvbxwfsv3h" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Fourfold/heavy_fourfold_body.png" id="22_fourfold_body"]
+[ext_resource type="Texture2D" uid="uid://c1hmqw73p0yss" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Fourfold/heavy_fourfold_field_v2.png" id="24_fourfold_vfx"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HeavyFourfold.tres" id="25_fourfold_animation"]
+[ext_resource type="Texture2D" uid="uid://bnq5so7y58kqs" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Fourfold/heavy_fourfold_node.png" id="26_fourfold_node"]
+[ext_resource type="Texture2D" uid="uid://dwl746ux72r5c" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Fourfold/heavy_fourfold_echo_heart.png" id="27_fourfold_heart"]
+[ext_resource type="Texture2D" uid="uid://spv3pdriqk7f" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Fourfold/heavy_fourfold_echo_club.png" id="28_fourfold_club"]
+[ext_resource type="Texture2D" uid="uid://btt8s3hk8ya62" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttackEX/Fourfold/heavy_fourfold_echo_spade.png" id="29_fourfold_spade"]
+[ext_resource type="Texture2D" uid="uid://dyu4o2mg8p0y0" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/CrystalOrb/cast_orb_body.png" id="30_cast_orb_body"]
+[ext_resource type="Texture2D" uid="uid://b4jpgu3o1fnfa" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/CrystalOrb/cast_orb_ring.png" id="31_cast_orb_ring"]
+[ext_resource type="Texture2D" uid="uid://d0t7i8jcqmk1c" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/CrystalOrb/cast_orb_front_arc.png" id="32_cast_orb_front_arc"]
+[ext_resource type="Texture2D" uid="uid://cc43htxy7f7sa" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/CrystalOrb/cast_orb_core.png" id="33_cast_orb_core"]
+[ext_resource type="Texture2D" uid="uid://buwfad6g3h8iq" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/CrystalOrb/cast_orb_crystal.png" id="34_cast_orb_crystal"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/CastCrystalOrb.tres" id="35_cast_orb_animation"]
+[ext_resource type="Texture2D" uid="uid://d12fvfmdcw1g7" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/ScarletCollapse/cast_collapse_body.png" id="36_collapse_body"]
+[ext_resource type="Texture2D" uid="uid://bxxc4s8j04ns3" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/ScarletCollapse/cast_collapse_core.png" id="37_collapse_core"]
+[ext_resource type="Texture2D" uid="uid://c1qmeae2wup50" path="res://Hcxmmx_FlandreScarlet/Assets/Character/CastEX/ScarletCollapse/cast_collapse_burst.png" id="38_collapse_burst"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/CastScarletCollapse.tres" id="39_collapse_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HitGuard.tres" id="40_hit_guard_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HitHat.tres" id="41_hit_hat_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HitCrouch.tres" id="42_hit_crouch_animation"]
+[ext_resource type="Texture2D" uid="uid://w4wed5ia1vwl" path="res://Hcxmmx_FlandreScarlet/Assets/Character/PowerUpEX/RedMoon/power_red_moon_body.png" id="43_red_moon_body"]
+[ext_resource type="Texture2D" uid="uid://cgv547vhsvml4" path="res://Hcxmmx_FlandreScarlet/Assets/Character/PowerUpEX/RedMoon/power_red_moon_disc.png" id="44_red_moon_disc"]
+[ext_resource type="Texture2D" uid="uid://tmuaptfqa7ty" path="res://Hcxmmx_FlandreScarlet/Assets/Character/PowerUpEX/RedMoon/power_red_moon_mist.png" id="45_red_moon_mist"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/PowerUpRedMoon.tres" id="46_red_moon_animation"]
+[ext_resource type="Texture2D" uid="uid://dkgy3ewbryn2l" path="res://Hcxmmx_FlandreScarlet/Assets/Character/PowerUpEX/CrystalResonance/power_crystal_resonance_body.png" id="47_crystal_power_body"]
+[ext_resource type="Texture2D" uid="uid://cos8l2vau3cry" path="res://Hcxmmx_FlandreScarlet/Assets/Character/PowerUpEX/CrystalResonance/power_crystal_resonance_halo.png" id="48_crystal_power_halo"]
+[ext_resource type="Texture2D" uid="uid://do4s8uj5ed8ts" path="res://Hcxmmx_FlandreScarlet/Assets/Character/PowerUpEX/CrystalResonance/power_crystal_resonance_shards.png" id="49_crystal_power_shards"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/PowerUpCrystalResonance.tres" id="50_crystal_power_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HeavyAttack_03.tres" id="51_heavy_03_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HeavyAttack_05.tres" id="52_heavy_05_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HeavyAttack_06.tres" id="53_heavy_06_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/HeavyAttack_07.tres" id="54_heavy_07_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/FlandreIntro.tres" id="55_intro_animation"]
+[ext_resource type="Texture2D" uid="uid://ny5nliulacs6" path="res://Hcxmmx_FlandreScarlet/Assets/Character/IntroEX/CrystalAwakening/intro_crystal_cocoon_v2.png" id="56_intro_crystal_cocoon"]
+[ext_resource type="Texture2D" uid="uid://dd3rdl1jkrdsi" path="res://Hcxmmx_FlandreScarlet/Assets/Character/IntroEX/CrystalAwakening/intro_crystal_burst.png" id="57_intro_crystal_burst"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/FlandreIntroCrystalAwakening.tres" id="58_intro_crystal_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/DeadEhehe.tres" id="59_dead_ehehe_animation"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/DeadHug.tres" id="60_dead_hug_animation"]
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Victory/victory_body.png" id="61_victory_body"]
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Victory/victory_crystal_halo.png" id="62_victory_halo"]
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Victory/victory_495_ripple.png" id="63_victory_ripple"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/Victory.tres" id="64_victory_animation"]
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Victory/victory_cheer_body.png" id="65_victory_cheer_body"]
+[ext_resource type="Animation" path="res://Hcxmmx_FlandreScarlet/Tscn/Animations/VictoryCheer.tres" id="66_victory_cheer_animation"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_attack_ghost"]
+blend_mode = 1
+
+[sub_resource type="Shader" id="Shader_victory_crystal_reveal"]
+code = "shader_type canvas_item;\nrender_mode blend_add;\n\nuniform float reveal : hint_range(0.0, 1.1) = 0.0;\nuniform float feather : hint_range(0.01, 0.2) = 0.08;\n\nvoid fragment() {\n    vec4 source = texture(TEXTURE, UV) * COLOR;\n    float mask = 1.0 - smoothstep(reveal - feather, reveal, UV.x);\n    source.rgb *= mask;\n    source.a *= mask;\n    COLOR = source;\n}\n"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_victory_crystal_reveal"]
+shader = SubResource("Shader_victory_crystal_reveal")
+shader_parameter/reveal = 0.0
+shader_parameter/feather = 0.08
+
+[sub_resource type="Shader" id="Shader_intro_white_silhouette"]
+code = "shader_type canvas_item;
+render_mode blend_add;
+
+void fragment() {
+    vec4 source = texture(TEXTURE, UV);
+    COLOR = vec4(vec3(1.0), source.a) * COLOR;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_intro_white_silhouette"]
+shader = SubResource("Shader_intro_white_silhouette")
+
+[sub_resource type="Gradient" id="Gradient_intro_glow"]
+offsets = PackedFloat32Array(0, 0.24, 0.62, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.92, 1, 1, 1, 0.3, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_intro_glow"]
+gradient = SubResource("Gradient_intro_glow")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_idle"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 0.4,
+"texture": ExtResource("2_idle_02")
+}, {
+"duration": 0.4,
+"texture": ExtResource("3_idle_03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_idle_04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_idle_01")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}]
+
+[sub_resource type="Animation" id="Animation_attack"]
+resource_name = "Attack"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_attack")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -768)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.14, 0.3, 0.55, 0.8),
+"transitions": PackedFloat32Array(0.6, 3, 1, 0.35, 0.65, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-6, 1), Vector2(28, -2), Vector2(28, -2), Vector2(3, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.14, 0.3, 0.55, 0.8),
+"transitions": PackedFloat32Array(0.65, 2.4, 1, 0.42, 0.75, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.98, 1.02), Vector2(1.16, 1.14), Vector2(1.16, 1.14), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.14, 0.3, 0.55, 0.8),
+"transitions": PackedFloat32Array(0.65, 2.4, 1, 0.42, 0.75, 1),
+"update": 0,
+"values": [0.0, -0.0174533, 0.0174533, 0.0174533, 0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.32),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_attack")]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.08, 0.32),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18, 0), Vector2(64, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.08, 0.32),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.42, 0.55, 0.58), Color(1, 0.2, 0.3, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cast"]
+resource_name = "Cast"
+length = 0.98
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.84),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.84),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.12),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_cast")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.12),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.34, 0.48, 0.62, 0.76, 0.84, 0.98),
+"transitions": PackedFloat32Array(1.5, 0.8, 1, 1, 0.8, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 4), Vector2(0, -10), Vector2(0, -13), Vector2(0, -9), Vector2(0, -3), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.46, 0.54, 0.66, 0.84, 0.98),
+"transitions": PackedFloat32Array(1.5, 0.8, 1, 1, 1, 0.8, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.96, 0.98), Vector2(1.04, 1.04), Vector2(1.015, 1.015), Vector2(1.055, 1.055), Vector2(1.025, 1.025), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.36, 0.54, 0.7, 0.84, 0.98),
+"transitions": PackedFloat32Array(1.5, 0.8, 1, 1, 0.8, 1, 1),
+"update": 0,
+"values": [0.0, -0.010472, 0.0139626, -0.00872665, 0.00436332, 0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.34, 0.68),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.34),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_cast")]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:offset")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.34),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.34, 0.68),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.34, 0.68),
+"transitions": PackedFloat32Array(0.8, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.25), Vector2(0.31, 0.31)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.34, 0.5, 0.68),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.38, 0.58, 0.38), Color(1, 0.24, 0.42, 0.22), Color(1, 0.18, 0.35, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dead"]
+resource_name = "Dead"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_dead")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.18),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.18, 0.42, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.55), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.36, 0.46, 0.65),
+"transitions": PackedFloat32Array(0.75, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -18), Vector2(0, 5), Vector2(0, -2), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.38, 0.48, 0.65),
+"transitions": PackedFloat32Array(0.75, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.238, 0.225), Vector2(0.257, 0.248), Vector2(0.247, 0.253), Vector2(0.25, 0.25), Vector2(0.25, 0.25)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.42, 0.52, 0.65),
+"transitions": PackedFloat32Array(0.75, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0261799, -0.0122173, 0.00436332, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hit"]
+resource_name = "Hit"
+length = 0.68
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.56),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_hit")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.09, 0.14, 0.2, 0.28, 0.46, 0.56, 0.68),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 0.75, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-34, -2), Vector2(-42, 1), Vector2(-35, -3), Vector2(-43, 0), Vector2(-27, 1), Vector2(-6, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.1, 0.2, 0.3, 0.46, 0.56, 0.68),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 0.8, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.94, 1.06), Vector2(0.97, 0.98), Vector2(0.93, 1.04), Vector2(1.01, 0.99), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.1, 0.2, 0.3, 0.46, 0.56, 0.68),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 0.8, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0610865, 0.0261799, -0.0349066, 0.0122173, -0.00436332, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_idle"]
+resource_name = "Idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -4), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.25000006, 1, 1.8660669),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.02, 0.98), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_power_up"]
+resource_name = "PowerUp"
+length = 1.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12, 1.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.12, 1.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.12),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_power_up")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.12),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.2, 0.24, 0.29, 0.34, 0.42, 0.7, 0.9, 1.02, 1.15),
+"transitions": PackedFloat32Array(1.5, 1, 1, 1, 1, 1, 0.8, 0.8, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 4), Vector2(0, -5), Vector2(3, -7), Vector2(-3, -5), Vector2(2, -6), Vector2(0, -5), Vector2(0, -3), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.2, 0.34, 0.46, 0.58, 0.7, 0.82, 0.95, 1.02, 1.15),
+"transitions": PackedFloat32Array(1.5, 1, 1, 1, 1, 1, 1, 0.8, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.95, 0.94), Vector2(1.08, 1.08), Vector2(1.035, 1.035), Vector2(1.07, 1.07), Vector2(1.035, 1.035), Vector2(1.055, 1.055), Vector2(1.035, 1.035), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.2, 0.29, 0.38, 0.46, 0.58, 0.7, 0.9, 1.02, 1.15),
+"transitions": PackedFloat32Array(1.5, 1, 1, 1, 1, 1, 1, 0.8, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.00872665, 0.0122173, -0.010472, 0.00698132, -0.00523599, 0.00349066, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.42, 0.46, 0.74),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.18),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_power_up")]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:offset")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.18),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.18, 0.74),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.18, 0.42, 0.46, 0.74),
+"transitions": PackedFloat32Array(0.75, 1, 0.8, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.25), Vector2(0.34, 0.34), Vector2(0.25, 0.25), Vector2(0.32, 0.32)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.18, 0.42, 0.46, 0.74),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.48, 0.22, 0.52), Color(1, 0.28, 0.18, 0), Color(1, 0.5, 0.28, 0.34), Color(1, 0.3, 0.2, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_reset"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.25)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.28, 0.32, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:offset")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -768)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.25)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.25)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.3, 0.42, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:offset")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -768)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AnimationRoot/FacingCorrection/ShatterBody:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("AnimationRoot/FacingCorrection/ShatterEffect:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("AnimationRoot/FacingCorrection/DashBody:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("AnimationRoot/FacingCorrection/DashEffect:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEffect:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("AnimationRoot/FacingCorrection/FourfoldBody:visible")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoA:visible")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoB:visible")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoC:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeMain:visible")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeA:visible")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeB:visible")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeC:visible")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("AnimationRoot/FacingCorrection/FourfoldAura:visible")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("AnimationRoot/FacingCorrection/CastCrystalBody:visible")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion:visible")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("AnimationRoot/FacingCorrection/CastCrystalGlow:visible")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("AnimationRoot/FacingCorrection/CastCrystalEcho:visible")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("AnimationRoot/FacingCorrection/CollapseBody:visible")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("AnimationRoot/FacingCorrection/CollapseGlow:visible")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion:visible")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:visible")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistBack:visible")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("AnimationRoot/FacingCorrection/RedMoonBody:visible")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistFront:visible")
+tracks/46/interp = 1
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("AnimationRoot/FacingCorrection/RedMoonSilhouette:visible")
+tracks/47/interp = 1
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing:visible")
+tracks/48/interp = 1
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceBody:visible")
+tracks/49/interp = 1
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceShards:visible")
+tracks/50/interp = 1
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("AnimationRoot/FacingCorrection/IntroSilhouette:visible")
+tracks/51/interp = 1
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup:visible")
+tracks/52/interp = 1
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("AnimationRoot/FacingCorrection/IntroBodyGlow:visible")
+tracks/53/interp = 1
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("VFXBack/CrystalIntroCocoon:visible")
+tracks/54/interp = 1
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("AnimationRoot/FacingCorrection/CrystalIntroSilhouette:visible")
+tracks/55/interp = 1
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("VFXBack/CrystalIntroBurst:visible")
+tracks/56/interp = 1
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("VFXBack/CrystalIntroCore:visible")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/58/type = "value"
+tracks/58/path = NodePath("VFXBack/VictoryCrystalHalo:visible")
+tracks/58/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/59/type = "value"
+tracks/59/path = NodePath("VFXBack/VictoryRipple:visible")
+tracks/59/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/60/type = "value"
+tracks/60/path = NodePath("VFXBack/VictoryRippleEcho:visible")
+tracks/60/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/61/type = "value"
+tracks/61/path = NodePath("AnimationRoot/FacingCorrection/VictoryBodyGlow:visible")
+tracks/61/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/62/type = "value"
+tracks/62/path = NodePath("VFXBack/VictoryCheerShardsBack:visible")
+tracks/62/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/63/type = "value"
+tracks/63/path = NodePath("VFXFront/VictoryCheerShardsFront:visible")
+tracks/63/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/64/type = "value"
+tracks/64/path = NodePath("AnimationRoot/FacingCorrection/VictoryCheerBodyGlow:visible")
+tracks/64/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_sword_attack"]
+resource_name = "SwordAttack"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.67),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.67),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.16, 0.34, 0.5, 0.67, 0.9),
+"transitions": PackedFloat32Array(0.6, 3, 1, 0.35, 0.55, 0.7, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-10, 2), Vector2(43, -3), Vector2(43, -3), Vector2(12, -1), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.16, 0.34, 0.5, 0.67, 0.9),
+"transitions": PackedFloat32Array(0.65, 2.5, 1, 0.38, 0.55, 0.8, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.97, 1.03), Vector2(1.19, 1.15), Vector2(1.19, 1.15), Vector2(1.035, 1.025), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.16, 0.34, 0.5, 0.67, 0.9),
+"transitions": PackedFloat32Array(0.65, 2.5, 1, 0.38, 0.55, 0.8, 1),
+"update": 0,
+"values": [0.0, -0.0279253, 0.0349066, 0.0349066, 0.00872665, 0.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.11, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.11, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(20, 1), Vector2(88, -3)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.11, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.38, 0.52, 0.58), Color(1, 0.14, 0.28, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_heavy"]
+resource_name = "heavyAttack"
+length = 0.95
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_heavy")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.18, 0.2, 0.34, 0.39, 0.45, 0.52, 0.7, 0.78, 0.95),
+"transitions": PackedFloat32Array(0.6, 1.6, 3.2, 1, 0.7, 0.8, 0.9, 0.35, 0.65, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-10, 2), Vector2(-22, 5), Vector2(68, -5), Vector2(68, -5), Vector2(61, -8), Vector2(67, -3), Vector2(62, -4), Vector2(8, 1), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.18, 0.2, 0.5, 0.58, 0.7, 0.77, 0.78, 0.95),
+"transitions": PackedFloat32Array(0.65, 1.6, 3, 1, 0.35, 0.55, 0.7, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.98, 1.02), Vector2(0.92, 1.08), Vector2(1.22, 1.17), Vector2(1.22, 1.17), Vector2(1.1, 1.08), Vector2(1.1, 1.08), Vector2(1.1, 1.08), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.18, 0.2, 0.5, 0.58, 0.7, 0.78, 0.95),
+"transitions": PackedFloat32Array(1.6, 1.4, 1, 1, 1, 0.75, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0261799, -0.0523599, 0.0436332, 0.0436332, 0.0261799, -0.00872665, 0.0, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.2, 0.28, 0.78),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0.75, 0.8, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.52),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:texture")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.18),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_heavy")]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:offset")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.18),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.18, 0.52),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(24, 2), Vector2(110, -4)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.18, 0.36, 0.52),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.46, 0.58, 0.72), Color(1, 0.25, 0.38, 0.42), Color(1, 0.15, 0.25, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.18, 0.52),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.26, 0.26), Vector2(0.29, 0.29)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:texture")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.52),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_heavy")]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:offset")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.52),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -724)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.52, 0.78),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(42, 3), Vector2(150, -7)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.52, 0.78),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.26, 0.26), Vector2(0.31, 0.31)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.52, 0.65, 0.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.38, 0.54, 0.46), Color(1, 0.24, 0.4, 0.24), Color(1, 0.14, 0.28, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main"]
+_data = {
+&"Attack": SubResource("Animation_attack"),
+&"Attack_03": ExtResource("12_attack_03_animation"),
+&"Attack_04": ExtResource("13_attack_04_animation"),
+&"Cast": SubResource("Animation_cast"),
+&"CastCrystalOrb": ExtResource("35_cast_orb_animation"),
+&"CastScarletCollapse": ExtResource("39_collapse_animation"),
+&"Dead": SubResource("Animation_dead"),
+&"DeadHug": ExtResource("60_dead_hug_animation"),
+&"DeadEhehe": ExtResource("59_dead_ehehe_animation"),
+&"HeavyAttack_03": ExtResource("51_heavy_03_animation"),
+&"HeavyAttack_05": ExtResource("52_heavy_05_animation"),
+&"HeavyAttack_06": ExtResource("53_heavy_06_animation"),
+&"HeavyAttack_07": ExtResource("54_heavy_07_animation"),
+&"HeavyDash": ExtResource("21_dash_animation"),
+&"HeavyFourfold": ExtResource("25_fourfold_animation"),
+&"HeavyShatter": ExtResource("18_shatter_animation"),
+&"Hit": SubResource("Animation_hit"),
+&"HitCrouch": ExtResource("42_hit_crouch_animation"),
+&"HitGuard": ExtResource("40_hit_guard_animation"),
+&"HitHat": ExtResource("41_hit_hat_animation"),
+&"Idle": SubResource("Animation_idle"),
+&"Intro": ExtResource("55_intro_animation"),
+&"IntroCrystalAwakening": ExtResource("58_intro_crystal_animation"),
+&"PowerUp": SubResource("Animation_power_up"),
+&"PowerUpCrystalResonance": ExtResource("50_crystal_power_animation"),
+&"PowerUpRedMoon": ExtResource("46_red_moon_animation"),
+&"RESET": SubResource("Animation_reset"),
+&"SwordAttack": SubResource("Animation_sword_attack"),
+&"SwordAttack_03": ExtResource("14_sword_03_animation"),
+&"SwordAttack_05": ExtResource("15_sword_05_animation"),
+&"Victory": ExtResource("64_victory_animation"),
+&"VictoryCheer": ExtResource("66_victory_cheer_animation"),
+&"heavyAttack": SubResource("Animation_heavy")
+}
+
+[node name="FlandreCharacter" type="Node2D"]
+script = ExtResource("11_controller")
+
+[node name="VFXBack" type="Node2D" parent="."]
+
+[node name="VictoryCrystalHalo" type="Sprite2D" parent="VFXBack"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_victory_crystal_reveal")
+position = Vector2(0, -215)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("62_victory_halo")
+
+[node name="VictoryRipple" type="Sprite2D" parent="VFXBack"]
+visible = false
+modulate = Color(1, 0.55, 0.72, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -215)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("63_victory_ripple")
+
+[node name="VictoryRippleEcho" type="Sprite2D" parent="VFXBack"]
+visible = false
+modulate = Color(0.8, 0.75, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -215)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("63_victory_ripple")
+
+[node name="VictoryCheerShardsBack" type="Sprite2D" parent="VFXBack"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -155)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("49_crystal_power_shards")
+
+[node name="CrystalIntroCocoon" type="Sprite2D" parent="VFXBack"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -190)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("56_intro_crystal_cocoon")
+
+[node name="CrystalIntroCore" type="Sprite2D" parent="VFXBack"]
+visible = false
+modulate = Color(1, 0.55, 0.72, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -190)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalIntroBurst" type="Sprite2D" parent="VFXBack"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -190)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("57_intro_crystal_burst")
+
+[node name="AnimationRoot" type="Node2D" parent="."]
+
+[node name="FacingCorrection" type="Node2D" parent="AnimationRoot"]
+scale = Vector2(-1, 1)
+
+[node name="VictoryBodyGlow" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.45, 0.65, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("61_victory_body")
+offset = Vector2(0, -768)
+
+[node name="VictoryCheerBodyGlow" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.7, 0.86, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("65_victory_cheer_body")
+offset = Vector2(0, -768)
+
+[node name="RedMoonDisc" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.5, 0.58, 0)
+position = Vector2(0, -350)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("44_red_moon_disc")
+
+[node name="RedMoonMistBack" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.3, 0.42, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -190)
+scale = Vector2(0.34, 0.32)
+texture = ExtResource("45_red_moon_mist")
+
+[node name="RedMoonSilhouette" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.04, 0.08, 0)
+z_index = 2
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("43_red_moon_body")
+offset = Vector2(0, -768)
+
+[node name="RedMoonBody" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+z_index = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("43_red_moon_body")
+offset = Vector2(0, -768)
+
+[node name="RedMoonMistFront" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.3, 0.42, 0)
+z_index = 4
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(12, -180)
+scale = Vector2(0.28, 0.25)
+texture = ExtResource("45_red_moon_mist")
+
+[node name="IntroSilhouette" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.025, 0.055, 0)
+z_index = 2
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_idle_01")
+offset = Vector2(0, -768)
+
+[node name="IntroBodyGlow" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.34, 0.48, 0)
+z_index = 5
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_idle_01")
+offset = Vector2(0, -768)
+
+[node name="CrystalIntroSilhouette" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+material = SubResource("ShaderMaterial_intro_white_silhouette")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_idle_01")
+offset = Vector2(0, -768)
+
+[node name="IntroGlowGroup" type="Node2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 6
+
+[node name="EyeLeft" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup"]
+modulate = Color(1, 0.05, 0.1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-15.5, -311.5)
+scale = Vector2(0.07, 0.045)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="EyeRight" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup"]
+modulate = Color(1, 0.05, 0.1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(9, -319)
+scale = Vector2(0.07, 0.045)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="CrystalWaveLeft" type="Node2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Red" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft"]
+modulate = Color(1, 0.08, 0.16, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-109, -229)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Yellow" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft"]
+modulate = Color(1, 0.76, 0.08, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-97, -245)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Orange" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft"]
+modulate = Color(1, 0.34, 0.06, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-84.5, -262)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Green" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft"]
+modulate = Color(0.14, 1, 0.18, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-71, -272)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Blue" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft"]
+modulate = Color(0.08, 0.5, 1, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-59, -257)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Violet" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft"]
+modulate = Color(0.58, 0.12, 1, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-47, -247)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="CrystalWaveRight" type="Node2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Violet" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight"]
+modulate = Color(0.58, 0.12, 1, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(47, -239)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Red" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight"]
+modulate = Color(1, 0.08, 0.16, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(60, -249)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Yellow" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight"]
+modulate = Color(1, 0.76, 0.08, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(72, -264)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Green" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight"]
+modulate = Color(0.14, 1, 0.18, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(85, -254)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Blue" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight"]
+modulate = Color(0.08, 0.5, 1, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(97, -231)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="Magenta" type="Sprite2D" parent="AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight"]
+modulate = Color(0.8, 0.08, 1, 0.95)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(109, -216)
+scale = Vector2(0.13, 0.18)
+texture = SubResource("GradientTexture2D_intro_glow")
+
+[node name="CrystalResonanceRing" type="Node2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+position = Vector2(0, -237)
+
+[node name="CrystalResonanceHalo" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+texture = ExtResource("48_crystal_power_halo")
+
+[node name="CrystalRed" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -457)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(470, 10, 314, 320)
+region_filter_clip_enabled = true
+
+[node name="CrystalOrange" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(343, -317)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(800, 130, 340, 360)
+region_filter_clip_enabled = true
+
+[node name="CrystalYellow" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(433, -47)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(890, 400, 340, 360)
+region_filter_clip_enabled = true
+
+[node name="CrystalGreen" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(328, 248)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(770, 690, 370, 370)
+region_filter_clip_enabled = true
+
+[node name="CrystalCyan" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, 430)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(450, 880, 354, 354)
+region_filter_clip_enabled = true
+
+[node name="CrystalBlue" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-337, 253)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(100, 690, 380, 380)
+region_filter_clip_enabled = true
+
+[node name="CrystalViolet" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-422, -52)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(20, 390, 370, 370)
+region_filter_clip_enabled = true
+
+[node name="CrystalMagenta" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CrystalResonanceRing"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-367, -327)
+texture = ExtResource("48_crystal_power_halo")
+region_enabled = true
+region_rect = Rect2(80, 100, 360, 400)
+region_filter_clip_enabled = true
+
+[node name="CrystalResonanceBody" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+z_index = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("47_crystal_power_body")
+offset = Vector2(0, -768)
+
+[node name="CrystalResonanceShards" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 4
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -190)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("49_crystal_power_shards")
+
+[node name="CastCrystalGlow" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.22, 0.42, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.258, 0.258)
+texture = ExtResource("30_cast_orb_body")
+offset = Vector2(0, -768)
+
+[node name="CastCrystalEcho" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.18, 0.38, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("30_cast_orb_body")
+offset = Vector2(0, -768)
+
+[node name="CastCrystalBody" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+z_index = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("30_cast_orb_body")
+offset = Vector2(0, -768)
+
+[node name="CastOrbAnchor" type="Node2D" parent="AnimationRoot/FacingCorrection"]
+position = Vector2(-120, -289)
+
+[node name="CastOrbMotion" type="Node2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+
+[node name="BackRing" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.112, 0.112)
+texture = ExtResource("31_cast_orb_ring")
+
+[node name="CrossRing" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion"]
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+rotation = 0.349066
+scale = Vector2(0.108, 0.037)
+texture = ExtResource("31_cast_orb_ring")
+
+[node name="Core" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion"]
+z_index = 2
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("33_cast_orb_core")
+
+[node name="CrystalBackBelt" type="Node2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion"]
+z_index = 1
+
+[node name="CrystalBackLeft" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion/CrystalBackBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-55, -27)
+rotation = -0.191986
+scale = Vector2(0.027, 0.027)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalBackTop" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion/CrystalBackBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(0, -43)
+rotation = 0.0872665
+scale = Vector2(0.024, 0.024)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalBackRight" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion/CrystalBackBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(56, -22)
+rotation = 0.226893
+scale = Vector2(0.026, 0.026)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalFrontBelt" type="Node2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion"]
+z_index = 3
+
+[node name="CrystalFrontLeft" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion/CrystalFrontBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-69, 10)
+rotation = -0.139626
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalFrontMidLeft" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion/CrystalFrontBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-24, 34)
+rotation = 0.174533
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalFrontMidRight" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion/CrystalFrontBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(29, 31)
+rotation = -0.20944
+scale = Vector2(0.026, 0.026)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalFrontRight" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion/CrystalFrontBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(69, 8)
+rotation = 0.122173
+scale = Vector2(0.029, 0.029)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="FrontArc" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion"]
+z_index = 4
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.112, 0.112)
+texture = ExtResource("32_cast_orb_front_arc")
+
+[node name="ReleaseFlash" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CastOrbAnchor/CastOrbMotion"]
+modulate = Color(1, 0.4, 0.55, 0)
+z_index = 5
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("33_cast_orb_core")
+
+[node name="CollapseGlow" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(0.75, 0.08, 0.22, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.232, 0.232)
+texture = ExtResource("36_collapse_body")
+offset = Vector2(0, -829.5)
+
+[node name="CollapseBody" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+z_index = 1
+scale = Vector2(0.2315, 0.2315)
+texture = ExtResource("36_collapse_body")
+offset = Vector2(0, -829.5)
+
+[node name="CollapseAnchor" type="Node2D" parent="AnimationRoot/FacingCorrection"]
+position = Vector2(-75, -340)
+
+[node name="CollapseMotion" type="Node2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+
+[node name="Core" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion"]
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("37_collapse_core")
+
+[node name="CoreGlow" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion"]
+modulate = Color(1, 0.12, 0.28, 0)
+z_index = 1
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("37_collapse_core")
+
+[node name="CrystalBelt" type="Node2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion"]
+modulate = Color(1, 0.38, 0.48, 0)
+z_index = 2
+
+[node name="CrystalA" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion/CrystalBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-96, -18)
+rotation = -1.39626
+scale = Vector2(0.023, 0.023)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalB" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion/CrystalBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-58, -78)
+rotation = -0.610865
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalC" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion/CrystalBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(8, -94)
+rotation = 0.0872665
+scale = Vector2(0.022, 0.022)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalD" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion/CrystalBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(78, -55)
+rotation = 0.872665
+scale = Vector2(0.021, 0.021)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalE" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion/CrystalBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(98, 24)
+rotation = 1.74533
+scale = Vector2(0.023, 0.023)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="CrystalF" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion/CrystalBelt"]
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-23, 84)
+rotation = 3.31613
+scale = Vector2(0.021, 0.021)
+texture = ExtResource("34_cast_orb_crystal")
+
+[node name="Burst" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion"]
+modulate = Color(1, 0.3, 0.42, 0)
+z_index = 4
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("38_collapse_burst")
+
+[node name="BurstGlow" type="Sprite2D" parent="AnimationRoot/FacingCorrection/CollapseAnchor/CollapseMotion"]
+modulate = Color(1, 0.12, 0.3, 0)
+z_index = 3
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("38_collapse_burst")
+
+[node name="ShatterEffect" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.055, 0.055)
+texture = ExtResource("17_shatter_vfx")
+offset = Vector2(0, -701)
+
+[node name="ShatterBody" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_shatter_body")
+offset = Vector2(0, -701)
+
+[node name="DashEffect" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("20_dash_vfx")
+offset = Vector2(0, -701)
+
+[node name="DashBody" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("19_dash_body")
+offset = Vector2(0, -701)
+
+[node name="FourfoldAura" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.22, 0.32, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("24_fourfold_vfx")
+offset = Vector2(0, -724)
+
+[node name="FourfoldEffect" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("24_fourfold_vfx")
+offset = Vector2(0, -724)
+
+[node name="FourfoldNodeMain" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-15, -135)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("26_fourfold_node")
+
+[node name="FourfoldNodeA" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(85, -215)
+rotation = 0.0523599
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("26_fourfold_node")
+
+[node name="FourfoldNodeB" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(-90, -198)
+rotation = -0.0523599
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("26_fourfold_node")
+
+[node name="FourfoldNodeC" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(75, -50)
+rotation = 0.0349066
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("26_fourfold_node")
+
+[node name="FourfoldEchoA" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("27_fourfold_heart")
+offset = Vector2(0, -724)
+
+[node name="FourfoldEchoB" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("28_fourfold_club")
+offset = Vector2(0, -724)
+
+[node name="FourfoldEchoC" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+z_index = 1
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("29_fourfold_spade")
+offset = Vector2(0, -724)
+
+[node name="FourfoldBody" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("22_fourfold_body")
+offset = Vector2(0, -724)
+
+[node name="AttackGhost" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.28, 0.32, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_cast")
+offset = Vector2(0, -768)
+
+[node name="SecondaryGhost" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+modulate = Color(1, 0.3, 0.42, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_heavy")
+offset = Vector2(0, -768)
+
+[node name="IdleSprite" type="AnimatedSprite2D" parent="AnimationRoot/FacingCorrection"]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_idle")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.24098015
+offset = Vector2(0, -768)
+
+[node name="PoseSprite" type="Sprite2D" parent="AnimationRoot/FacingCorrection"]
+visible = false
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_hit")
+offset = Vector2(0, -724)
+
+[node name="VFXFront" type="Node2D" parent="."]
+z_index = 1
+
+[node name="VictoryCheerShardsFront" type="Sprite2D" parent="VFXFront"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_attack_ghost")
+position = Vector2(8, -138)
+scale = Vector2(-0.11, 0.11)
+texture = ExtResource("49_crystal_power_shards")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_main")
+}
+
+[node name="OriginGuide" type="Marker2D" parent="."]

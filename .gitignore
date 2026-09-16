@@ -1,0 +1,12 @@
+# Godot 4+ generated data
+.godot/
+/android/
+
+# Local/exported build output
+/Build/
+/export_templates/
+
+# IDE and user-local files
+*.user
+*.tmp
+*.log

@@ -1,0 +1,353 @@
+[gd_resource type="Animation" format=3 uid="uid://o7tnvkm02ftk"]
+
+[resource]
+resource_name = "IntroCrystalAwakening"
+length = 2.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.9, 1.04, 1.22, 2.05),
+"transitions": PackedFloat32Array(1, 0.8, 2.6, 0.5, 0.85, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 3), Vector2(0, 0), Vector2(0, -5), Vector2(0, -1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.88, 0.98, 1.1, 2.05),
+"transitions": PackedFloat32Array(1, 2.4, 0.55, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1.25, 1.18, 1.3, 0.55), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VFXBack/CrystalIntroCocoon:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.03, 1.22),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VFXBack/CrystalIntroCocoon:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.03, 0.62, 0.96, 1.2),
+"transitions": PackedFloat32Array(1.2, 0.8, 2.4, 1),
+"update": 0,
+"values": [Vector2(0, -184), Vector2(0, -192), Vector2(0, -194), Vector2(0, -194)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VFXBack/CrystalIntroCocoon:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.03, 0.35, 0.72, 0.94, 1.2),
+"transitions": PackedFloat32Array(2.1, 0.7, 2.5, 0.4, 1),
+"update": 0,
+"values": [Vector2(0.14, 0.14), Vector2(0.265, 0.265), Vector2(0.31, 0.31), Vector2(0.245, 0.245), Vector2(0.38, 0.38)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VFXBack/CrystalIntroCocoon:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.03, 0.72, 0.94, 1.2),
+"transitions": PackedFloat32Array(1.15, 1.25, 0.85, 1),
+"update": 0,
+"values": [0.0, 3.92699, 5.49779, 6.28319]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VFXBack/CrystalIntroCocoon:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.03, 0.24, 0.72, 0.94, 1.08, 1.2),
+"transitions": PackedFloat32Array(2, 0.75, 1.15, 2.6, 0.45, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.52), Color(1.15, 1.15, 1.15, 0.92), Color(1.35, 1.35, 1.35, 1), Color(1.2, 1.2, 1.2, 0.65), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/CrystalIntroSilhouette:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/CrystalIntroSilhouette:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.3, 0.68, 1.1),
+"transitions": PackedFloat32Array(1.7, 0.75, 1),
+"update": 0,
+"values": [Vector2(0, 10), Vector2(0, 2), Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/CrystalIntroSilhouette:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.3, 0.82, 1.1),
+"transitions": PackedFloat32Array(1.5, 0.7, 1),
+"update": 0,
+"values": [Vector2(0.242, 0.242), Vector2(0.25, 0.25), Vector2(0.258, 0.258)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/CrystalIntroSilhouette:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.3, 0.52, 0.86, 0.98, 1.1),
+"transitions": PackedFloat32Array(2, 0.75, 1, 2.4, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.46), Color(1.2, 1.2, 1.2, 0.78), Color(1.6, 1.6, 1.6, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("VFXBack/CrystalIntroBurst:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.9, 1.46),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("VFXBack/CrystalIntroBurst:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -190)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("VFXBack/CrystalIntroBurst:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.9, 1.02, 1.18, 1.44),
+"transitions": PackedFloat32Array(3, 0.55, 0.85, 1),
+"update": 0,
+"values": [Vector2(0.035, 0.035), Vector2(0.15, 0.15), Vector2(0.255, 0.255), Vector2(0.32, 0.32)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("VFXBack/CrystalIntroBurst:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.9, 1.44),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.10472, 0.174533]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("VFXBack/CrystalIntroBurst:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.9, 1, 1.12, 1.28, 1.44),
+"transitions": PackedFloat32Array(3, 0.6, 1, 0.55, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.45, 1.45, 1.45, 1), Color(1.2, 1.2, 1.2, 0.88), Color(1.1, 1.1, 1.1, 0.45), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.86),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1.2, 1.34, 1.58, 1.84),
+"transitions": PackedFloat32Array(2.2, 0.7, 1.2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.28, 1.28, 1.28, 1), Color(1.12, 1.12, 1.12, 0.88), Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/EyeLeft:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(1.26, 1.4, 1.62, 1.82),
+"transitions": PackedFloat32Array(2.4, 0.6, 0.8, 1),
+"update": 0,
+"values": [Color(1, 0.08, 0.14, 0), Color(1.45, 0.3, 0.4, 1), Color(1.2, 0.4, 0.48, 0.7), Color(1, 0.1, 0.18, 0)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/EyeRight:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(1.29, 1.43, 1.65, 1.82),
+"transitions": PackedFloat32Array(2.4, 0.6, 0.8, 1),
+"update": 0,
+"values": [Color(1, 0.08, 0.14, 0), Color(1.45, 0.3, 0.4, 1), Color(1.2, 0.4, 0.48, 0.7), Color(1, 0.1, 0.18, 0)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(1.2, 1.36, 1.62, 1.84),
+"transitions": PackedFloat32Array(2.4, 0.65, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.35, 1.35, 1.35, 1), Color(1.15, 1.15, 1.15, 0.9), Color(1, 1, 1, 0)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1.3, 1.46, 1.68, 1.84),
+"transitions": PackedFloat32Array(2.4, 0.65, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.35, 1.35, 1.35, 1), Color(1.15, 1.15, 1.15, 0.9), Color(1, 1, 1, 0)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("VFXBack/CrystalIntroCore:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.08, 1.08),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("VFXBack/CrystalIntroCore:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0.08, 0.72, 1.06),
+"transitions": PackedFloat32Array(1, 0.8, 1),
+"update": 0,
+"values": [Vector2(0, -190), Vector2(0, -194), Vector2(0, -194)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("VFXBack/CrystalIntroCore:scale")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0.08, 0.3, 0.58, 0.82, 1.06),
+"transitions": PackedFloat32Array(2.2, 0.65, 1.25, 2.8, 1),
+"update": 0,
+"values": [Vector2(0.025, 0.025), Vector2(0.068, 0.068), Vector2(0.076, 0.076), Vector2(0.062, 0.062), Vector2(0.018, 0.018)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("VFXBack/CrystalIntroCore:rotation")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0.08, 0.82, 1.06),
+"transitions": PackedFloat32Array(1, 1.2, 1),
+"update": 0,
+"values": [0.0, -9.42478, -12.5664]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("VFXBack/CrystalIntroCore:modulate")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0.08, 0.24, 0.64, 0.88, 1.06),
+"transitions": PackedFloat32Array(2.2, 0.7, 1.2, 0.45, 1),
+"update": 0,
+"values": [Color(1, 0.45, 0.62, 0), Color(1.2, 0.62, 0.82, 0.85), Color(1.35, 0.82, 1, 1), Color(1.5, 1, 1.2, 0.9), Color(1, 0.5, 0.7, 0)]
+}

@@ -1,0 +1,52 @@
+[gd_resource type="Animation" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Character/HeavyAttack/heavy_attack_03.png" id="1_texture"]
+
+[resource]
+resource_name = "HeavyAttack_03"
+length = 1.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.88), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.88), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("1_texture")]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0, -724)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:scale")
+tracks/4/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.25, 0.25)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationRoot:position")
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.18, 0.25, 0.32, 0.34, 0.37, 0.4, 0.52, 0.7, 0.88, 1.05), "transitions": PackedFloat32Array(0.6, 1.8, 3.2, 1, 3.2, 3.2, 2.4, 0.7, 0.35, 0.65, 1, 1), "update": 0, "values": [Vector2(0, 0), Vector2(-12, -14), Vector2(-20, -25), Vector2(46, 20), Vector2(46, 20), Vector2(43, 13), Vector2(50, 26), Vector2(47, 19), Vector2(50, 24), Vector2(12, 4), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationRoot:scale")
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.18, 0.25, 0.32, 0.4, 0.52, 0.7, 0.87, 0.88, 1.05), "transitions": PackedFloat32Array(0.65, 1.7, 3, 1, 2.2, 0.7, 0.35, 0.6, 1, 1, 1), "update": 0, "values": [Vector2(1, 1), Vector2(0.98, 1.03), Vector2(0.93, 1.08), Vector2(1.2, 1.16), Vector2(1.2, 1.16), Vector2(1.17, 1.13), Vector2(1.17, 1.13), Vector2(1.1, 1.08), Vector2(1.1, 1.08), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationRoot:rotation")
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.18, 0.25, 0.32, 0.34, 0.37, 0.4, 0.52, 0.7, 0.88, 1.05), "transitions": PackedFloat32Array(0.7, 1.6, 2.8, 1, 3, 3, 2.2, 0.7, 0.4, 0.7, 1, 1), "update": 0, "values": [0.0, -0.0349066, -0.0698132, 0.0523599, 0.0523599, 0.0418879, 0.0628319, 0.0488692, 0.0523599, 0.0174533, 0.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:modulate")
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.24, 0.27, 0.33, 0.88), "transitions": PackedFloat32Array(1, 3, 1, 0.5, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1.08, 0.88, 0.94, 1), Color(1.22, 1.02, 1.1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}

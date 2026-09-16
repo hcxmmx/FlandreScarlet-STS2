@@ -1,0 +1,141 @@
+[gd_resource type="Animation" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Victory/victory_body.png" id="1_body"]
+
+[resource]
+resource_name = "Victory"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [true]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("1_body")]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0, -768)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:modulate")
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.14), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:modulate")
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.14, 1.4), "transitions": PackedFloat32Array(1.5, 0.75, 1, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.7), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:position")
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.22, 0.34, 0.47, 0.64, 1.4),
+"transitions": PackedFloat32Array(0.72, 1.65, 0.72, 1.35, 1, 1),
+"update": 0,
+"values": [Vector2(0, 10), Vector2(0, -12), Vector2(0, 4), Vector2(0, -2), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:scale")
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.22, 0.34, 0.47, 0.64, 1.4),
+"transitions": PackedFloat32Array(0.72, 1.65, 0.72, 1.35, 1, 1),
+"update": 0,
+"values": [Vector2(0.235, 0.248), Vector2(0.258, 0.258), Vector2(0.258, 0.244), Vector2(0.247, 0.253), Vector2(0.25, 0.25), Vector2(0.25, 0.25)]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:rotation")
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.22, 0.36, 0.5, 0.68, 1.4),
+"transitions": PackedFloat32Array(0.8, 1.45, 0.78, 1.2, 1, 1),
+"update": 0,
+"values": [-0.0139626, 0.010472, -0.00698132, 0.00349066, 0.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/VictoryBodyGlow:visible")
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.28, 1.02), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/VictoryBodyGlow:modulate")
+tracks/10/keys = {
+"times": PackedFloat32Array(0.28, 0.46, 0.72, 1.02), "transitions": PackedFloat32Array(1.4, 0.85, 1.2, 1), "update": 0, "values": [Color(1, 0.35, 0.55, 0), Color(1, 0.55, 0.82, 0.3), Color(0.72, 0.82, 1, 0.2), Color(1, 0.35, 0.55, 0)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/VictoryBodyGlow:scale")
+tracks/11/keys = {
+"times": PackedFloat32Array(0.28, 0.55, 1.02), "transitions": PackedFloat32Array(0.8, 1.2, 1), "update": 0, "values": [Vector2(0.25, 0.25), Vector2(0.263, 0.263), Vector2(0.272, 0.272)]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("VFXBack/VictoryCrystalHalo:visible")
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.12, 1.26), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("VFXBack/VictoryCrystalHalo:modulate")
+tracks/13/keys = {
+"times": PackedFloat32Array(0.12, 0.3, 0.58, 0.94, 1.26), "transitions": PackedFloat32Array(1.5, 0.85, 1, 1.2, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.72), Color(1, 1, 1, 0.96), Color(1, 1, 1, 0.72), Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("VFXBack/VictoryCrystalHalo:scale")
+tracks/14/keys = {
+"times": PackedFloat32Array(0.12, 0.42, 0.78, 1.26), "transitions": PackedFloat32Array(0.8, 1.2, 1, 1), "update": 0, "values": [Vector2(0.22, 0.22), Vector2(0.32, 0.32), Vector2(0.36, 0.36), Vector2(0.39, 0.39)]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("VFXBack/VictoryCrystalHalo:rotation")
+tracks/15/keys = {
+"times": PackedFloat32Array(0.12, 1.26), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [-0.0523599, 0.0523599]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("VFXBack/VictoryCrystalHalo:material:shader_parameter/reveal")
+tracks/16/keys = {
+"times": PackedFloat32Array(0.12, 0.62, 1.4), "transitions": PackedFloat32Array(1.7, 1, 1), "update": 0, "values": [0.0, 1.08, 1.08]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("VFXBack/VictoryRipple:visible")
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.34, 1.13), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("VFXBack/VictoryRipple:modulate")
+tracks/18/keys = {
+"times": PackedFloat32Array(0.34, 0.48, 0.68, 1.13), "transitions": PackedFloat32Array(1.6, 0.8, 1.25, 1), "update": 0, "values": [Color(1, 0.65, 0.75, 0), Color(1, 0.72, 0.82, 0.92), Color(1, 0.42, 0.62, 0.72), Color(1, 0.25, 0.5, 0)]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("VFXBack/VictoryRipple:scale")
+tracks/19/keys = {
+"times": PackedFloat32Array(0.34, 0.58, 0.82, 1.13), "transitions": PackedFloat32Array(0.72, 1.25, 1, 1), "update": 0, "values": [Vector2(0.1, 0.1), Vector2(0.23, 0.23), Vector2(0.34, 0.34), Vector2(0.46, 0.46)]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("VFXBack/VictoryRipple:rotation")
+tracks/20/keys = {
+"times": PackedFloat32Array(0.34, 1.13), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 0.10472]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("VFXBack/VictoryRippleEcho:visible")
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.54, 1.34), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("VFXBack/VictoryRippleEcho:modulate")
+tracks/22/keys = {
+"times": PackedFloat32Array(0.54, 0.69, 0.88, 1.34), "transitions": PackedFloat32Array(1.5, 0.85, 1.2, 1), "update": 0, "values": [Color(0.72, 0.78, 1, 0), Color(0.78, 0.82, 1, 0.58), Color(1, 0.42, 0.72, 0.4), Color(1, 0.3, 0.6, 0)]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("VFXBack/VictoryRippleEcho:scale")
+tracks/23/keys = {
+"times": PackedFloat32Array(0.54, 0.76, 1.02, 1.34), "transitions": PackedFloat32Array(0.75, 1.2, 1, 1), "update": 0, "values": [Vector2(0.08, 0.08), Vector2(0.21, 0.21), Vector2(0.36, 0.36), Vector2(0.5, 0.5)]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("VFXBack/VictoryRippleEcho:rotation")
+tracks/24/keys = {
+"times": PackedFloat32Array(0.54, 1.34), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0698132, -0.0698132]
+}

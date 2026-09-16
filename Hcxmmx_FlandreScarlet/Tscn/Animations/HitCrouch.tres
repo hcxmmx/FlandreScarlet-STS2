@@ -1,0 +1,61 @@
+[gd_resource type="Animation" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Character/Hit/hit_04.png" id="1_texture"]
+
+[resource]
+resource_name = "HitCrouch"
+length = 0.74
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.62), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.62), "transitions": PackedFloat32Array(1, 1), "update": 1, "values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:texture")
+tracks/2/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [ExtResource("1_texture")]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:offset")
+tracks/3/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0, -672)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:scale")
+tracks/4/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.25, 0.25)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:rotation")
+tracks/5/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationRoot:position")
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.09, 0.14, 0.2, 0.3, 0.48, 0.62, 0.74),
+"transitions": PackedFloat32Array(1, 1.8, 0.7, 1.7, 0.75, 1.1, 0.8, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-7, 10), Vector2(-11, 13), Vector2(-6, 11), Vector2(-10, 13), Vector2(-5, 9), Vector2(-1, 3), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationRoot:scale")
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.1, 0.16, 0.23, 0.34, 0.5, 0.62, 0.74),
+"transitions": PackedFloat32Array(1, 1.8, 0.7, 1.6, 0.75, 1.1, 0.8, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.025, 0.96), Vector2(0.99, 1.015), Vector2(1.02, 0.97), Vector2(0.995, 1.008), Vector2(1.005, 0.998), Vector2(1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimationRoot:rotation")
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.16, 0.22, 0.34, 0.5, 0.62, 0.74),
+"transitions": PackedFloat32Array(1, 1.7, 0.7, 1.6, 0.75, 1.1, 0.8, 1, 1),
+"update": 0,
+"values": [0.0, -0.010472, 0.00872665, -0.00872665, 0.00698132, -0.00349066, 0.0, 0.0, 0.0]
+}

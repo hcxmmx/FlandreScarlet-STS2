@@ -1,0 +1,269 @@
+[gd_resource type="Animation" format=3 uid="uid://cfpgyjyfc8xex"]
+
+[resource]
+resource_name = "Intro"
+length = 1.85
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationRoot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.48, 0.9, 1.85),
+"transitions": PackedFloat32Array(1, 0.7, 1.25, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2), Vector2(0, -2), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.52, 0.68, 0.9, 1, 1.09, 1.28, 1.85),
+"transitions": PackedFloat32Array(1, 1.7, 0.65, 1.2, 2.4, 0.55, 0.8, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 0.8, 0.84, 0.38), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1.32, 1.12, 1.18, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.02, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.02, 0.95, 1.8),
+"transitions": PackedFloat32Array(0.8, 1.1, 1),
+"update": 0,
+"values": [Vector2(0, -336), Vector2(0, -349), Vector2(0, -360)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.02),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.37, 0.37)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.02, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.383972, 0.663225]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.02, 0.2, 0.5, 1.12, 1.5, 1.8),
+"transitions": PackedFloat32Array(1.7, 1.25, 0.75, 1, 0.55, 1),
+"update": 0,
+"values": [Color(0.75, 0.18, 0.25, 0), Color(0.9, 0.3, 0.38, 0.2), Color(1, 0.48, 0.56, 0.7), Color(1, 0.5, 0.58, 0.66), Color(0.9, 0.28, 0.38, 0.38), Color(0.7, 0.12, 0.22, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/IntroSilhouette:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.92),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/IntroSilhouette:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.3, 0.6, 0.92),
+"transitions": PackedFloat32Array(1.8, 0.8, 1),
+"update": 0,
+"values": [Vector2(0, 9), Vector2(0, 2), Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/IntroSilhouette:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.3, 0.7, 0.92),
+"transitions": PackedFloat32Array(1.25, 0.8, 1),
+"update": 0,
+"values": [Vector2(0.245, 0.245), Vector2(0.25, 0.25), Vector2(0.252, 0.252)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/IntroSilhouette:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.3, 0.48, 0.7, 0.92),
+"transitions": PackedFloat32Array(1.9, 0.8, 0.55, 1),
+"update": 0,
+"values": [Color(1, 0.015, 0.04, 0), Color(1, 0.025, 0.055, 0.82), Color(1, 0.055, 0.09, 0.72), Color(1, 0.12, 0.16, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.88, 1.58),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.88, 1.03, 1.3, 1.56),
+"transitions": PackedFloat32Array(2.2, 0.7, 1.2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.35, 1.35, 1.35, 1), Color(1.18, 1.18, 1.18, 0.95), Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/EyeLeft:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.9, 1.05, 1.24, 1.52),
+"transitions": PackedFloat32Array(2.5, 0.6, 0.8, 1),
+"update": 0,
+"values": [Color(1, 0.05, 0.1, 0), Color(1.65, 0.24, 0.34, 1), Color(1.3, 0.4, 0.46, 0.84), Color(1, 0.1, 0.18, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/EyeRight:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0.93, 1.08, 1.27, 1.52),
+"transitions": PackedFloat32Array(2.5, 0.6, 0.8, 1),
+"update": 0,
+"values": [Color(1, 0.05, 0.1, 0), Color(1.65, 0.24, 0.34, 1), Color(1.3, 0.4, 0.46, 0.84), Color(1, 0.1, 0.18, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveLeft:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.92, 1.06, 1.32, 1.56),
+"transitions": PackedFloat32Array(2.4, 0.65, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.38, 1.38, 1.38, 1), Color(1.16, 1.16, 1.16, 0.94), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("AnimationRoot/FacingCorrection/IntroGlowGroup/CrystalWaveRight:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(1, 1.14, 1.38, 1.56),
+"transitions": PackedFloat32Array(2.4, 0.65, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1.38, 1.38, 1.38, 1), Color(1.16, 1.16, 1.16, 0.94), Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AnimationRoot/FacingCorrection/IntroBodyGlow:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.96, 1.42),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("AnimationRoot/FacingCorrection/IntroBodyGlow:scale")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.96, 1.08, 1.38),
+"transitions": PackedFloat32Array(2.2, 0.65, 1),
+"update": 0,
+"values": [Vector2(0.25, 0.25), Vector2(0.253, 0.253), Vector2(0.264, 0.264)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("AnimationRoot/FacingCorrection/IntroBodyGlow:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.96, 1.06, 1.16, 1.4),
+"transitions": PackedFloat32Array(2.6, 0.6, 0.75, 1),
+"update": 0,
+"values": [Color(1, 0.34, 0.48, 0), Color(1.45, 0.72, 0.88, 0.72), Color(1.2, 0.48, 0.68, 0.5), Color(1, 0.3, 0.48, 0)]
+}

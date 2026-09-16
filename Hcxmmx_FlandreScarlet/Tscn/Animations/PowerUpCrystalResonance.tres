@@ -1,0 +1,120 @@
+[gd_resource type="Animation" format=3]
+
+[resource]
+resource_name = "PowerUpCrystalResonance"
+length = 1.22
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 1.06), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing:visible")
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.04, 1.1), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing:position")
+tracks/3/keys = {
+"times": PackedFloat32Array(0.04, 0.42, 0.82, 1.1), "transitions": PackedFloat32Array(0.8, 1, 0.7, 1), "update": 0, "values": [Vector2(0, -222), Vector2(0, -236), Vector2(0, -244), Vector2(0, -252)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing:scale")
+tracks/4/keys = {
+"times": PackedFloat32Array(0.04, 0.18, 0.34, 0.52, 0.72, 0.9, 1.1), "transitions": PackedFloat32Array(2.4, 0.65, 1.8, 0.65, 1.6, 0.5, 1), "update": 0, "values": [Vector2(0.29, 0.29), Vector2(0.36, 0.36), Vector2(0.38, 0.38), Vector2(0.365, 0.365), Vector2(0.39, 0.39), Vector2(0.38, 0.38), Vector2(0.415, 0.415)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing:rotation")
+tracks/5/keys = {
+"times": PackedFloat32Array(0.04, 1.1), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 1.5708]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalResonanceHalo:modulate")
+tracks/6/keys = {
+"times": PackedFloat32Array(0.04, 0.16, 0.34, 0.52, 0.72, 0.9, 1.1), "transitions": PackedFloat32Array(2.6, 0.7, 2, 0.65, 1.8, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.22), Color(1, 1, 1, 0.34), Color(1, 1, 1, 0.25), Color(1.1, 1.1, 1.1, 0.42), Color(1, 1, 1, 0.28), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceBody:visible")
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.08, 1.06), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceBody:position")
+tracks/8/keys = {
+"times": PackedFloat32Array(0.08, 0.24, 0.5, 0.72, 0.9, 1.06), "transitions": PackedFloat32Array(0.8, 0.7, 1, 0.75, 0.6, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, -5), Vector2(0, -8), Vector2(0, -6), Vector2(0, -3), Vector2(0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceBody:scale")
+tracks/9/keys = {
+"times": PackedFloat32Array(0.08, 0.24, 0.5, 0.72, 0.9, 1.06), "transitions": PackedFloat32Array(0.8, 0.7, 1, 0.75, 0.6, 1), "update": 0, "values": [Vector2(0.25, 0.25), Vector2(0.258, 0.258), Vector2(0.262, 0.262), Vector2(0.258, 0.258), Vector2(0.253, 0.253), Vector2(0.25, 0.25)]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceBody:modulate")
+tracks/10/keys = {
+"times": PackedFloat32Array(0.08, 0.3, 0.52, 0.72, 0.9, 1.06), "transitions": PackedFloat32Array(1, 1.5, 0.65, 1.8, 0.6, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1.08, 1.04, 1.12, 1), Color(1.16, 1.12, 1.2, 1), Color(1.04, 1.03, 1.08, 1), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceShards:visible")
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.14, 1.02), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceShards:position")
+tracks/12/keys = {
+"times": PackedFloat32Array(0.14, 0.46, 0.78, 1.02), "transitions": PackedFloat32Array(1.8, 0.8, 0.55, 1), "update": 0, "values": [Vector2(0, -150), Vector2(0, -186), Vector2(0, -218), Vector2(0, -252)]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceShards:scale")
+tracks/13/keys = {
+"times": PackedFloat32Array(0.14, 0.46, 0.78, 1.02), "transitions": PackedFloat32Array(1.8, 0.8, 0.55, 1), "update": 0, "values": [Vector2(0.26, 0.26), Vector2(0.31, 0.31), Vector2(0.33, 0.33), Vector2(0.36, 0.36)]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceShards:modulate")
+tracks/14/keys = {
+"times": PackedFloat32Array(0.14, 0.26, 0.5, 0.72, 0.88, 1.02), "transitions": PackedFloat32Array(2.5, 0.7, 1.7, 0.65, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.62), Color(1, 1, 1, 0.42), Color(1.18, 1.18, 1.18, 0.86), Color(1, 1, 1, 0.48), Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalRed:modulate")
+tracks/15/keys = {
+"times": PackedFloat32Array(0.1, 0.16, 0.26, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalOrange:modulate")
+tracks/16/keys = {
+"times": PackedFloat32Array(0.14, 0.2, 0.3, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalYellow:modulate")
+tracks/17/keys = {
+"times": PackedFloat32Array(0.18, 0.24, 0.34, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalGreen:modulate")
+tracks/18/keys = {
+"times": PackedFloat32Array(0.22, 0.28, 0.38, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalCyan:modulate")
+tracks/19/keys = {
+"times": PackedFloat32Array(0.26, 0.32, 0.42, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalBlue:modulate")
+tracks/20/keys = {
+"times": PackedFloat32Array(0.3, 0.36, 0.46, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalViolet:modulate")
+tracks/21/keys = {
+"times": PackedFloat32Array(0.34, 0.4, 0.5, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("AnimationRoot/FacingCorrection/CrystalResonanceRing/CrystalMagenta:modulate")
+tracks/22/keys = {
+"times": PackedFloat32Array(0.38, 0.44, 0.54, 0.7, 0.78, 0.94, 1.06), "transitions": PackedFloat32Array(2.5, 0.55, 0.8, 2.2, 0.6, 0.45, 1), "update": 0, "values": [Color(1, 1, 1, 0), Color(1.2, 1.2, 1.2, 1), Color(1, 1, 1, 0.24), Color(1, 1, 1, 0.3), Color(1.2, 1.2, 1.2, 0.95), Color(1, 1, 1, 0.35), Color(1, 1, 1, 0)]
+}

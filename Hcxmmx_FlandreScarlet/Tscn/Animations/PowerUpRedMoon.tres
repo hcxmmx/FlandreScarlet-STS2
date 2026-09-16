@@ -1,0 +1,110 @@
+[gd_resource type="Animation" format=3]
+
+[resource]
+resource_name = "PowerUpRedMoon"
+length = 1.35
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 1.2), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:visible")
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 1.28), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:position")
+tracks/3/keys = {
+"times": PackedFloat32Array(0.05, 0.3, 0.82, 1.28), "transitions": PackedFloat32Array(0.65, 0.8, 0.7, 1), "update": 0, "values": [Vector2(0, -318), Vector2(0, -338), Vector2(0, -364), Vector2(0, -382)]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:modulate")
+tracks/4/keys = {
+"times": PackedFloat32Array(0.05, 0.2, 0.38, 0.84, 1.1, 1.28), "transitions": PackedFloat32Array(1.8, 0.75, 1.2, 0.8, 0.45, 1), "update": 0, "values": [Color(0.75, 0.2, 0.28, 0), Color(1, 0.45, 0.5, 0.62), Color(1, 0.68, 0.72, 0.92), Color(1, 0.55, 0.62, 0.86), Color(0.9, 0.3, 0.4, 0.62), Color(0.7, 0.15, 0.25, 0)]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistBack:visible")
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.08, 1.14), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistBack:position")
+tracks/6/keys = {
+"times": PackedFloat32Array(0.08, 0.32, 0.82, 1.14), "transitions": PackedFloat32Array(2.2, 0.7, 0.55, 1), "update": 0, "values": [Vector2(0, -168), Vector2(0, -202), Vector2(0, -220), Vector2(0, -252)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistBack:scale")
+tracks/7/keys = {
+"times": PackedFloat32Array(0.08, 0.32, 0.82, 1.14), "transitions": PackedFloat32Array(2.4, 0.7, 0.55, 1), "update": 0, "values": [Vector2(0.27, 0.22), Vector2(0.35, 0.32), Vector2(0.38, 0.36), Vector2(0.42, 0.4)]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistBack:modulate")
+tracks/8/keys = {
+"times": PackedFloat32Array(0.08, 0.2, 0.48, 0.84, 1.14), "transitions": PackedFloat32Array(2.6, 0.7, 1.4, 0.45, 1), "update": 0, "values": [Color(1, 0.2, 0.32, 0), Color(1, 0.42, 0.5, 0.7), Color(1, 0.26, 0.38, 0.55), Color(1, 0.4, 0.5, 0.68), Color(0.8, 0.12, 0.24, 0)]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/RedMoonBody:visible")
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.04, 1.2), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/RedMoonBody:position")
+tracks/10/keys = {
+"times": PackedFloat32Array(0.04, 0.22, 0.5, 0.86, 1.05, 1.18), "transitions": PackedFloat32Array(0.8, 0.65, 1, 0.8, 0.55, 1), "update": 0, "values": [Vector2(0, 0), Vector2(0, -4), Vector2(0, -7), Vector2(0, -6), Vector2(0, -2), Vector2(0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/RedMoonBody:scale")
+tracks/11/keys = {
+"times": PackedFloat32Array(0.04, 0.22, 0.5, 0.86, 1.05, 1.18), "transitions": PackedFloat32Array(0.8, 0.65, 1, 0.85, 0.55, 1), "update": 0, "values": [Vector2(0.25, 0.25), Vector2(0.258, 0.258), Vector2(0.262, 0.262), Vector2(0.258, 0.258), Vector2(0.252, 0.252), Vector2(0.25, 0.25)]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/RedMoonBody:modulate")
+tracks/12/keys = {
+"times": PackedFloat32Array(0.04, 0.12, 0.22, 0.82, 1.2), "transitions": PackedFloat32Array(1.4, 0.7, 1.2, 0.8, 1), "update": 0, "values": [Color(0.8, 0.22, 0.3, 0), Color(1, 0.65, 0.7, 0.5), Color(1, 0.92, 0.94, 1), Color(1.04, 0.86, 0.9, 1), Color(1, 0.92, 0.94, 1)]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistFront:visible")
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.16, 1.08), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistFront:position")
+tracks/14/keys = {
+"times": PackedFloat32Array(0.16, 0.38, 0.78, 1.08), "transitions": PackedFloat32Array(2.4, 0.7, 0.5, 1), "update": 0, "values": [Vector2(18, -138), Vector2(10, -178), Vector2(-4, -205), Vector2(-12, -242)]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistFront:scale")
+tracks/15/keys = {
+"times": PackedFloat32Array(0.16, 0.38, 0.78, 1.08), "transitions": PackedFloat32Array(2.5, 0.7, 0.5, 1), "update": 0, "values": [Vector2(0.2, 0.16), Vector2(0.28, 0.25), Vector2(0.31, 0.29), Vector2(0.35, 0.33)]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("AnimationRoot/FacingCorrection/RedMoonMistFront:modulate")
+tracks/16/keys = {
+"times": PackedFloat32Array(0.16, 0.26, 0.5, 0.78, 1.08), "transitions": PackedFloat32Array(2.8, 0.7, 1.3, 0.4, 1), "update": 0, "values": [Color(1, 0.28, 0.4, 0), Color(1, 0.48, 0.56, 0.42), Color(1, 0.25, 0.38, 0.3), Color(1, 0.42, 0.52, 0.4), Color(0.8, 0.12, 0.24, 0)]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("AnimationRoot/FacingCorrection/RedMoonDisc:rotation")
+tracks/17/keys = {
+"times": PackedFloat32Array(0.05, 1.28), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [-0.0349066, 0.0698132]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("AnimationRoot/FacingCorrection/RedMoonSilhouette:visible")
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.26), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("AnimationRoot/FacingCorrection/RedMoonSilhouette:scale")
+tracks/19/keys = {
+"times": PackedFloat32Array(0.04, 0.14, 0.26), "transitions": PackedFloat32Array(1.8, 0.65, 1), "update": 0, "values": [Vector2(0.248, 0.248), Vector2(0.26, 0.26), Vector2(0.266, 0.266)]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("AnimationRoot/FacingCorrection/RedMoonSilhouette:modulate")
+tracks/20/keys = {
+"times": PackedFloat32Array(0.04, 0.1, 0.18, 0.26), "transitions": PackedFloat32Array(2, 0.7, 0.45, 1), "update": 0, "values": [Color(1, 0.02, 0.06, 0), Color(1, 0.04, 0.08, 0.78), Color(1, 0.08, 0.12, 0.5), Color(1, 0.12, 0.18, 0)]
+}

@@ -1,0 +1,32 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>Hcxmmx.FlandreScarletMod</RootNamespace>
+    <ImplicitUsings>true</ImplicitUsings>
+    <LangVersion>12.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <Sts2Dir Condition="'$(Sts2Dir)' == '' and '$(SLAY_THE_SPIRE_2_DIR)' != ''">$(SLAY_THE_SPIRE_2_DIR)</Sts2Dir>
+    <Sts2DataDir>$(Sts2Dir)\data_sts2_windows_x86_64</Sts2DataDir>
+    <DeployMod Condition="'$(DeployMod)' == ''">false</DeployMod>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="sts2">
+      <HintPath>$(Sts2DataDir)\sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(Sts2DataDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyMod" AfterTargets="Build" Condition="'$(DeployMod)' == 'true'">
+    <MakeDir Directories="$(Sts2Dir)\mods\FlandreScarlet\" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(Sts2Dir)\mods\FlandreScarlet\" />
+    <Copy SourceFiles="FlandreScarlet.json" DestinationFolder="$(Sts2Dir)\mods\FlandreScarlet\" />
+  </Target>
+</Project>

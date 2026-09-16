@@ -1,0 +1,235 @@
+[gd_resource type="Animation" format=3]
+
+[resource]
+resource_name = "HeavyFourfold"
+length = 1.08
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationRoot/FacingCorrection/IdleSprite:visible")
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.9), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationRoot/FacingCorrection/PoseSprite:visible")
+tracks/1/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationRoot/FacingCorrection/AttackGhost:visible")
+tracks/2/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AnimationRoot/FacingCorrection/SecondaryGhost:visible")
+tracks/3/keys = {
+"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 1, "values": [false]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AnimationRoot/FacingCorrection/FourfoldBody:visible")
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.9), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AnimationRoot/FacingCorrection/FourfoldBody:modulate")
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.78, 0.9), "transitions": PackedFloat32Array(1, 0.55, 1), "update": 0, "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AnimationRoot:position")
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.58, 0.74, 0.9, 1.08),
+"transitions": PackedFloat32Array(0.6, 1.8, 3.2, 1, 0.35, 0.65, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-10, 3), Vector2(-18, 6), Vector2(44, -5), Vector2(44, -5), Vector2(10, -1), Vector2(0, 0), Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AnimationRoot:scale")
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.58, 0.74, 0.89, 0.9, 1.08),
+"transitions": PackedFloat32Array(0.65, 1.6, 3, 1, 0.35, 0.6, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.98, 1.03), Vector2(0.93, 1.08), Vector2(1.18, 1.14), Vector2(1.18, 1.14), Vector2(1.1, 1.07), Vector2(1.1, 1.07), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AnimationRoot:rotation")
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.58, 0.74, 0.9, 1.08),
+"transitions": PackedFloat32Array(0.65, 1.6, 3, 1, 0.35, 0.6, 1, 1),
+"update": 0,
+"values": [0.0, -0.0174533, -0.0436332, 0.0349066, 0.0349066, 0.00872665, 0.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEffect:visible")
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.9), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEffect:scale")
+tracks/10/keys = {
+"times": PackedFloat32Array(0.08, 0.22, 0.34, 0.68, 0.9),
+"transitions": PackedFloat32Array(2.8, 0.75, 0.65, 0.55, 1),
+"update": 0,
+"values": [Vector2(0.12, 0.12), Vector2(0.27, 0.27), Vector2(0.34, 0.34), Vector2(0.36, 0.36), Vector2(0.38, 0.38)]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEffect:rotation")
+tracks/11/keys = {
+"times": PackedFloat32Array(0.1), "transitions": PackedFloat32Array(1), "update": 0, "values": [0.0]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEffect:modulate")
+tracks/12/keys = {
+"times": PackedFloat32Array(0.08, 0.15, 0.26, 0.42, 0.68, 0.9),
+"transitions": PackedFloat32Array(3.2, 0.55, 1.8, 0.65, 0.4, 1),
+"update": 0,
+"values": [Color(1, 0.72, 0.82, 0.32), Color(1, 0.88, 0.94, 0.88), Color(1, 0.45, 0.6, 0.58), Color(1, 0.78, 0.88, 0.82), Color(1, 0.35, 0.5, 0.5), Color(1, 0.2, 0.34, 0)]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoA:visible")
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.82), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoA:position")
+tracks/14/keys = {
+"times": PackedFloat32Array(0.12, 0.22, 0.58, 0.82), "transitions": PackedFloat32Array(2.5, 0.7, 0.5, 1), "update": 0, "values": [Vector2(20, -20), Vector2(85, -95), Vector2(98, -105), Vector2(125, -122)]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoA:scale")
+tracks/15/keys = {
+"times": PackedFloat32Array(0.12, 0.22, 0.82), "transitions": PackedFloat32Array(2.2, 0.65, 1), "update": 0, "values": [Vector2(0.17, 0.17), Vector2(0.215, 0.215), Vector2(0.23, 0.23)]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoA:rotation")
+tracks/16/keys = {
+"times": PackedFloat32Array(0.12, 0.22, 0.82), "transitions": PackedFloat32Array(1, 0.6, 1), "update": 0, "values": [-0.0174533, 0.0523599, 0.0872665]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoA:modulate")
+tracks/17/keys = {
+"times": PackedFloat32Array(0.12), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoB:visible")
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.86), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoB:position")
+tracks/19/keys = {
+"times": PackedFloat32Array(0.16, 0.26, 0.62, 0.86), "transitions": PackedFloat32Array(2.5, 0.7, 0.5, 1), "update": 0, "values": [Vector2(-15, -15), Vector2(-90, -78), Vector2(-104, -86), Vector2(-135, -98)]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoB:scale")
+tracks/20/keys = {
+"times": PackedFloat32Array(0.16, 0.26, 0.86), "transitions": PackedFloat32Array(2.2, 0.65, 1), "update": 0, "values": [Vector2(0.17, 0.17), Vector2(0.205, 0.205), Vector2(0.225, 0.225)]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoB:rotation")
+tracks/21/keys = {
+"times": PackedFloat32Array(0.16, 0.26, 0.86), "transitions": PackedFloat32Array(1, 0.6, 1), "update": 0, "values": [0.0174533, -0.0523599, -0.0872665]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoB:modulate")
+tracks/22/keys = {
+"times": PackedFloat32Array(0.16), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoC:visible")
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.9), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoC:position")
+tracks/24/keys = {
+"times": PackedFloat32Array(0.2, 0.3, 0.66, 0.9), "transitions": PackedFloat32Array(2.5, 0.7, 0.5, 1), "update": 0, "values": [Vector2(10, 20), Vector2(75, 95), Vector2(88, 108), Vector2(112, 132)]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoC:scale")
+tracks/25/keys = {
+"times": PackedFloat32Array(0.2, 0.3, 0.9), "transitions": PackedFloat32Array(2.2, 0.65, 1), "update": 0, "values": [Vector2(0.17, 0.17), Vector2(0.21, 0.21), Vector2(0.23, 0.23)]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoC:rotation")
+tracks/26/keys = {
+"times": PackedFloat32Array(0.2, 0.3, 0.9), "transitions": PackedFloat32Array(1, 0.6, 1), "update": 0, "values": [0.0, 0.0349066, 0.0698132]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("AnimationRoot/FacingCorrection/FourfoldEchoC:modulate")
+tracks/27/keys = {
+"times": PackedFloat32Array(0.2), "transitions": PackedFloat32Array(1), "update": 0, "values": [Color(1, 1, 1, 1)]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeMain:visible")
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.74), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeMain:scale")
+tracks/29/keys = {
+"times": PackedFloat32Array(0.08, 0.13, 0.24, 0.74), "transitions": PackedFloat32Array(3, 0.45, 0.6, 1), "update": 0, "values": [Vector2(0.045, 0.045), Vector2(0.075, 0.075), Vector2(0.062, 0.062), Vector2(0.09, 0.09)]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeMain:modulate")
+tracks/30/keys = {
+"times": PackedFloat32Array(0.08, 0.13, 0.5, 0.74), "transitions": PackedFloat32Array(3, 1, 0.4, 1), "update": 0, "values": [Color(1, 0.82, 0.9, 0.9), Color(1, 1, 1, 1), Color(1, 0.7, 0.82, 0.9), Color(1, 0.35, 0.5, 0)]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeA:visible")
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.78), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeA:scale")
+tracks/32/keys = {
+"times": PackedFloat32Array(0.12, 0.17, 0.3, 0.78), "transitions": PackedFloat32Array(3, 0.45, 0.6, 1), "update": 0, "values": [Vector2(0.045, 0.045), Vector2(0.075, 0.075), Vector2(0.062, 0.062), Vector2(0.092, 0.092)]
+}
+tracks/33/type = "value"
+tracks/33/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeA:modulate")
+tracks/33/keys = {
+"times": PackedFloat32Array(0.12, 0.17, 0.54, 0.78), "transitions": PackedFloat32Array(3, 1, 0.4, 1), "update": 0, "values": [Color(1, 0.8, 0.9, 0.88), Color(1, 1, 1, 1), Color(1, 0.68, 0.82, 0.88), Color(1, 0.32, 0.48, 0)]
+}
+tracks/34/type = "value"
+tracks/34/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeB:visible")
+tracks/34/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.82), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/35/type = "value"
+tracks/35/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeB:scale")
+tracks/35/keys = {
+"times": PackedFloat32Array(0.16, 0.21, 0.34, 0.82), "transitions": PackedFloat32Array(3, 0.45, 0.6, 1), "update": 0, "values": [Vector2(0.043, 0.043), Vector2(0.073, 0.073), Vector2(0.06, 0.06), Vector2(0.09, 0.09)]
+}
+tracks/36/type = "value"
+tracks/36/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeB:modulate")
+tracks/36/keys = {
+"times": PackedFloat32Array(0.16, 0.21, 0.58, 0.82), "transitions": PackedFloat32Array(3, 1, 0.4, 1), "update": 0, "values": [Color(1, 0.8, 0.9, 0.88), Color(1, 1, 1, 1), Color(1, 0.66, 0.8, 0.86), Color(1, 0.3, 0.46, 0)]
+}
+tracks/37/type = "value"
+tracks/37/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeC:visible")
+tracks/37/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.86), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/38/type = "value"
+tracks/38/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeC:scale")
+tracks/38/keys = {
+"times": PackedFloat32Array(0.2, 0.25, 0.38, 0.86), "transitions": PackedFloat32Array(3, 0.45, 0.6, 1), "update": 0, "values": [Vector2(0.045, 0.045), Vector2(0.078, 0.078), Vector2(0.063, 0.063), Vector2(0.095, 0.095)]
+}
+tracks/39/type = "value"
+tracks/39/path = NodePath("AnimationRoot/FacingCorrection/FourfoldNodeC:modulate")
+tracks/39/keys = {
+"times": PackedFloat32Array(0.2, 0.25, 0.62, 0.86), "transitions": PackedFloat32Array(3, 1, 0.4, 1), "update": 0, "values": [Color(1, 0.82, 0.92, 0.92), Color(1, 1, 1, 1), Color(1, 0.68, 0.82, 0.9), Color(1, 0.32, 0.48, 0)]
+}
+tracks/40/type = "value"
+tracks/40/path = NodePath("AnimationRoot/FacingCorrection/FourfoldAura:visible")
+tracks/40/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.94), "transitions": PackedFloat32Array(1, 1, 1), "update": 1, "values": [false, true, false]
+}
+tracks/41/type = "value"
+tracks/41/path = NodePath("AnimationRoot/FacingCorrection/FourfoldAura:scale")
+tracks/41/keys = {
+"times": PackedFloat32Array(0.08, 0.24, 0.48, 0.94), "transitions": PackedFloat32Array(2.4, 0.7, 0.55, 1), "update": 0, "values": [Vector2(0.2, 0.2), Vector2(0.34, 0.34), Vector2(0.37, 0.37), Vector2(0.44, 0.44)]
+}
+tracks/42/type = "value"
+tracks/42/path = NodePath("AnimationRoot/FacingCorrection/FourfoldAura:modulate")
+tracks/42/keys = {
+"times": PackedFloat32Array(0.08, 0.18, 0.34, 0.52, 0.72, 0.94), "transitions": PackedFloat32Array(2.8, 0.65, 1.8, 0.65, 0.4, 1), "update": 0, "values": [Color(1, 0.16, 0.3, 0.12), Color(1, 0.32, 0.48, 0.42), Color(1, 0.12, 0.28, 0.24), Color(1, 0.3, 0.46, 0.36), Color(1, 0.1, 0.24, 0.2), Color(1, 0.08, 0.2, 0)]
+}
