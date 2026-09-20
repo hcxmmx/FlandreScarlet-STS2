@@ -1,4 +1,6 @@
 <Project Sdk="Godot.NET.Sdk/4.5.1">
+  <Import Project="FlandreScarlet.local.props" Condition="Exists('FlandreScarlet.local.props')" />
+
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>

@@ -1,6 +1,8 @@
 #nullable enable
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Combat;
@@ -15,15 +17,83 @@ internal static class FlandreCombat
     internal const string NodeName = "FlandreCharacter";
 
     internal static PackedScene? Scene;
+    internal static bool ScenePreloadRequested;
+    internal static ulong ScenePreloadStartedAt;
     internal static bool EnableTriggerLogging = true;
     internal static readonly HashSet<FlandreController> ActiveControllers = new();
+
+    internal static void RequestScenePreload()
+    {
+        if (Scene != null || ScenePreloadRequested)
+        {
+            return;
+        }
+
+        Error error = ResourceLoader.LoadThreadedRequest(
+            ScenePath,
+            "PackedScene",
+            useSubThreads: true,
+            ResourceLoader.CacheMode.Reuse);
+        if (error != Error.Ok)
+        {
+            GD.PrintErr($"[FlandreScarlet] Could not request threaded combat preload: {error}.");
+            return;
+        }
+
+        ScenePreloadRequested = true;
+        ScenePreloadStartedAt = Time.GetTicksMsec();
+        GD.Print("[FlandreScarlet] Threaded combat scene preload requested.");
+    }
+
+    internal static PackedScene? GetCombatScene()
+    {
+        if (Scene != null)
+        {
+            return Scene;
+        }
+
+        if (ScenePreloadRequested)
+        {
+            ResourceLoader.ThreadLoadStatus status =
+                ResourceLoader.LoadThreadedGetStatus(ScenePath);
+            ulong elapsed = Time.GetTicksMsec() - ScenePreloadStartedAt;
+            GD.Print(
+                $"[FlandreScarlet] Combat preload status at first use: {status} " +
+                $"after {elapsed} ms.");
+
+            if (status != ResourceLoader.ThreadLoadStatus.Failed
+                && status != ResourceLoader.ThreadLoadStatus.InvalidResource)
+            {
+                // If loading is still in progress this waits for the same request;
+                // it does not start a second synchronous load.
+                Scene = ResourceLoader.LoadThreadedGet(ScenePath) as PackedScene;
+            }
+        }
+
+        Scene ??= ResourceLoader.Load<PackedScene>(ScenePath);
+        return Scene;
+    }
 }
 
-[HarmonyPatch(typeof(CombatManager), "EndCombatInternal", new Type[0])]
+[HarmonyPatch]
 internal static class CombatManagerEndCombatPatch
 {
+    private static MethodBase TargetMethod()
+    {
+        // Normal gameplay calls the private EndCombatInternal(CombatTurnState)
+        // overload directly. CombatTurnState is internal to sts2, so select the
+        // overload by reflection instead of naming its inaccessible parameter type.
+        return typeof(CombatManager)
+            .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic)
+            .Single(method =>
+                method.Name == "EndCombatInternal"
+                && method.GetParameters().Length == 1);
+    }
+
     private static void Prefix()
     {
+        GD.Print("[FlandreScarlet] Combat victory detected; requesting victory animation.");
+
         foreach (var controller in new List<FlandreController>(FlandreCombat.ActiveControllers))
         {
             if (GodotObject.IsInstanceValid(controller))
@@ -58,8 +128,7 @@ internal static class NCreatureReadyPatch
             return;
         }
 
-        var scene = FlandreCombat.Scene ?? ResourceLoader.Load<PackedScene>(FlandreCombat.ScenePath);
-        FlandreCombat.Scene = scene;
+        var scene = FlandreCombat.GetCombatScene();
         if (scene == null)
         {
             GD.PrintErr($"[FlandreScarlet] Could not load scene: {FlandreCombat.ScenePath}");

@@ -10,3 +10,4 @@
 *.user
 *.tmp
 *.log
+/FlandreScarlet.local.props

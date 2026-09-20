@@ -1,0 +1,152 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Merchant/merchant_idle.png" id="1_idle"]
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Merchant/merchant_inspect.png" id="2_inspect"]
+[ext_resource type="Texture2D" path="res://Hcxmmx_FlandreScarlet/Assets/Merchant/merchant_relic_magic_ring.svg" id="3_ring"]
+[ext_resource type="Script" path="res://Hcxmmx_FlandreScarlet/Scripts/FlandreMerchantController.cs" id="4_controller"]
+
+[sub_resource type="Animation" id="Animation_reset"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VisualRoot:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(0.3, 0.3)]}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VisualRoot/IdleBody:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [0.0]}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VisualRoot/InspectBody:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [0.0]}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VisualRoot/InspectBody/InspectRoot:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [Vector2(321, -509)]}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VisualRoot/InspectBody/InspectRoot/RelicIcon:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0), "transitions": PackedFloat32Array(1), "update": 0, "values": [0.0]}
+
+[sub_resource type="Animation" id="Animation_ambient"]
+resource_name = "Ambient"
+length = 6.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VisualRoot:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {"times": PackedFloat32Array(0, 1.6, 3.2, 4.8, 6.4), "transitions": PackedFloat32Array(0.75, 1.35, 0.75, 1.35, 0.75), "update": 0, "values": [Vector2(0.3, 0.3), Vector2(0.3025, 0.306), Vector2(0.3, 0.3), Vector2(0.3025, 0.306), Vector2(0.3, 0.3)]}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VisualRoot/IdleBody:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {"times": PackedFloat32Array(0, 1.6, 3.2, 4.8, 6.4), "transitions": PackedFloat32Array(0.8, 1.2, 0.8, 1.2, 0.8), "update": 0, "values": [-0.0025, 0.0025, -0.0025, 0.0025, -0.0025]}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VisualRoot/InspectBody:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {"times": PackedFloat32Array(0, 1.6, 3.2, 4.8, 6.4), "transitions": PackedFloat32Array(0.8, 1.2, 0.8, 1.2, 0.8), "update": 0, "values": [-0.002, 0.002, -0.002, 0.002, -0.002]}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VisualRoot/InspectBody/InspectRoot:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {"times": PackedFloat32Array(0, 1.6, 3.2, 4.8, 6.4), "transitions": PackedFloat32Array(0.72, 1.28, 0.72, 1.28, 0.72), "update": 0, "values": [Vector2(321, -509), Vector2(321, -523), Vector2(321, -509), Vector2(321, -523), Vector2(321, -509)]}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VisualRoot/InspectBody/InspectRoot/RelicIcon:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {"times": PackedFloat32Array(0, 1.6, 3.2, 4.8, 6.4), "transitions": PackedFloat32Array(0.8, 1.2, 0.8, 1.2, 0.8), "update": 0, "values": [-0.045, 0.045, -0.045, 0.045, -0.045]}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VisualRoot/InspectBody/InspectRoot/MagicRingBack:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {"times": PackedFloat32Array(0, 6.4), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, 6.283185]}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VisualRoot/InspectBody/InspectRoot/MagicRingFront:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {"times": PackedFloat32Array(0, 6.4), "transitions": PackedFloat32Array(1, 1), "update": 0, "values": [0.0, -4.18879]}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VisualRoot/InspectBody/InspectRoot/MagicRingBack:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {"times": PackedFloat32Array(0, 1.6, 3.2, 4.8, 6.4), "transitions": PackedFloat32Array(0.7, 1.3, 0.7, 1.3, 0.7), "update": 0, "values": [Color(1, 0.62, 0.74, 0.36), Color(1, 0.82, 0.88, 0.62), Color(1, 0.62, 0.74, 0.36), Color(1, 0.82, 0.88, 0.62), Color(1, 0.62, 0.74, 0.36)]}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VisualRoot/InspectBody/InspectRoot/MagicRingFront:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {"times": PackedFloat32Array(0, 1.6, 3.2, 4.8, 6.4), "transitions": PackedFloat32Array(1.3, 0.7, 1.3, 0.7, 1.3), "update": 0, "values": [Color(1, 0.9, 0.94, 0.82), Color(1, 0.55, 0.68, 0.52), Color(1, 0.9, 0.94, 0.82), Color(1, 0.55, 0.68, 0.52), Color(1, 0.9, 0.94, 0.82)]}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main"]
+_data = {&"Ambient": SubResource("Animation_ambient"), &"RESET": SubResource("Animation_reset")}
+
+[node name="FlandreMerchant" type="Node2D"]
+script = ExtResource("4_controller")
+
+[node name="VisualRoot" type="Node2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="IdleBody" type="Sprite2D" parent="VisualRoot"]
+position = Vector2(0, -768)
+texture = ExtResource("1_idle")
+
+[node name="InspectBody" type="Sprite2D" parent="VisualRoot"]
+visible = false
+position = Vector2(0, -768)
+texture = ExtResource("2_inspect")
+
+[node name="InspectRoot" type="Node2D" parent="VisualRoot/InspectBody"]
+visible = false
+position = Vector2(321, -509)
+
+[node name="MagicRingBack" type="Sprite2D" parent="VisualRoot/InspectBody/InspectRoot"]
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("3_ring")
+self_modulate = Color(1, 0.62, 0.74, 0.36)
+
+[node name="MagicRingFront" type="Sprite2D" parent="VisualRoot/InspectBody/InspectRoot"]
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("3_ring")
+self_modulate = Color(1, 0.9, 0.94, 0.82)
+
+[node name="RelicIcon" type="Sprite2D" parent="VisualRoot/InspectBody/InspectRoot"]
+scale = Vector2(0.62, 0.62)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {&"": SubResource("AnimationLibrary_main")}
+autoplay = "Ambient"

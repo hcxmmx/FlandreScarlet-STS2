@@ -1,0 +1,403 @@
+[gd_scene load_steps=18 format=3 uid="uid://x2qi1seb2a0k"]
+
+[ext_resource type="Texture2D" uid="uid://c2xtydwti4p2e" path="res://Hcxmmx_FlandreScarlet/Assets/CharacterSelect/select_background.png" id="1_bg"]
+[ext_resource type="Texture2D" uid="uid://d0ajbakxj0wih" path="res://Hcxmmx_FlandreScarlet/Assets/CharacterSelect/select_character_idle.png" id="2_character"]
+[ext_resource type="Texture2D" uid="uid://3imoum5gbjes" path="res://Hcxmmx_FlandreScarlet/Assets/CharacterSelect/select_sparkle.svg" id="3_sparkle"]
+[ext_resource type="Script" uid="uid://b80gwa1508b5u" path="res://Hcxmmx_FlandreScarlet/Scripts/FlandreCharacterSelectController.cs" id="4_controller"]
+[ext_resource type="Texture2D" uid="uid://l5iqfrc5y8k" path="res://Hcxmmx_FlandreScarlet/Assets/CharacterSelect/select_headpat_01.png" id="5_headpat_01"]
+[ext_resource type="Texture2D" uid="uid://b8pkasavwhmal" path="res://Hcxmmx_FlandreScarlet/Assets/CharacterSelect/select_player_hand.png" id="6_hand"]
+[ext_resource type="Texture2D" uid="uid://clqk0rt5q8kbs" path="res://Hcxmmx_FlandreScarlet/Assets/CharacterSelect/select_highfive_hand.png" id="7_highfive_hand"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_add"]
+blend_mode = 1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dust"]
+emission_shape = 3
+emission_box_extents = Vector3(760, 430, 1)
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 2.0
+initial_velocity_max = 8.0
+gravity = Vector3(0, -3, 0)
+scale_min = 0.09
+scale_max = 0.24
+color = Color(1, 0.42, 0.72, 0.42)
+
+[sub_resource type="Shader" id="Shader_character_glow"]
+code = "shader_type canvas_item;
+render_mode blend_add;
+
+uniform vec4 glow_color : source_color = vec4(1.0, 0.12, 0.42, 1.0);
+uniform float radius = 7.0;
+
+void fragment() {
+    vec2 px = TEXTURE_PIXEL_SIZE * radius;
+    float a = texture(TEXTURE, UV).a;
+    a = max(a, texture(TEXTURE, UV + vec2(px.x, 0.0)).a);
+    a = max(a, texture(TEXTURE, UV - vec2(px.x, 0.0)).a);
+    a = max(a, texture(TEXTURE, UV + vec2(0.0, px.y)).a);
+    a = max(a, texture(TEXTURE, UV - vec2(0.0, px.y)).a);
+    a = max(a, texture(TEXTURE, UV + px).a);
+    a = max(a, texture(TEXTURE, UV - px).a);
+    a = max(a, texture(TEXTURE, UV + vec2(px.x, -px.y)).a);
+    a = max(a, texture(TEXTURE, UV + vec2(-px.x, px.y)).a);
+    COLOR = vec4(glow_color.rgb, a * COLOR.a * glow_color.a);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_character_glow"]
+shader = SubResource("Shader_character_glow")
+shader_parameter/glow_color = Color(1, 0.12, 0.42, 1)
+shader_parameter/radius = 8.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_crystal_burst"]
+emission_shape = 1
+emission_sphere_radius = 12.0
+direction = Vector3(0, -1, 0)
+spread = 180.0
+initial_velocity_min = 45.0
+initial_velocity_max = 95.0
+gravity = Vector3(0, 24, 0)
+scale_min = 0.1
+scale_max = 0.24
+
+[sub_resource type="Shader" id="Shader_highfive_hand_fade"]
+code = "shader_type canvas_item;
+
+void fragment() {
+    vec4 source = texture(TEXTURE, UV) * COLOR;
+    float sleeve_fade = 1.0 - smoothstep(0.70, 1.0, UV.y);
+    source.a *= sleeve_fade;
+    COLOR = source;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_highfive_hand_fade"]
+shader = SubResource("Shader_highfive_hand_fade")
+
+[sub_resource type="Animation" id="Animation_idle"]
+resource_name = "Idle"
+length = 4.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterPivot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4, 4.8),
+"transitions": PackedFloat32Array(0.75, 1.35, 0.75),
+"update": 0,
+"values": [Vector2(1535, 545), Vector2(1535, 531), Vector2(1535, 545)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterPivot:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.4, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.00349066, 0.00349066, -0.00349066]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterPivot:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.4, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.008, 1.008), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterPivot/ReactionMotion/Glow:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.4, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.32, 0.62, 0.08), Color(1, 0.42, 0.72, 0.17), Color(1, 0.32, 0.62, 0.08)]
+}
+
+[sub_resource type="Animation" id="Animation_reset"]
+resource_name = "RESET"
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main"]
+_data = {
+&"Idle": SubResource("Animation_idle"),
+&"RESET": SubResource("Animation_reset")
+}
+
+[node name="FlandreCharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("4_controller")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1280, 600)
+texture = ExtResource("1_bg")
+
+[node name="AmbientDust" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(1660, 610)
+amount = 28
+texture = ExtResource("3_sparkle")
+lifetime = 5.5
+preprocess = 5.5
+randomness = 0.65
+visibility_rect = Rect2(-900, -560, 1800, 1120)
+process_material = SubResource("ParticleProcessMaterial_dust")
+
+[node name="CharacterPivot" type="Node2D" parent="."]
+position = Vector2(1535, 545)
+
+[node name="ReactionMotion" type="Node2D" parent="CharacterPivot"]
+
+[node name="Glow" type="Sprite2D" parent="CharacterPivot/ReactionMotion"]
+modulate = Color(1, 0.32, 0.62, 0.08)
+material = SubResource("ShaderMaterial_character_glow")
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("2_character")
+
+[node name="Character" type="Sprite2D" parent="CharacterPivot/ReactionMotion"]
+scale = Vector2(0.62, 0.62)
+texture = ExtResource("2_character")
+
+[node name="ReactionGlow" type="Sprite2D" parent="CharacterPivot/ReactionMotion"]
+visible = false
+modulate = Color(1, 0.38, 0.68, 0)
+material = SubResource("ShaderMaterial_character_glow")
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("5_headpat_01")
+
+[node name="ReactionCharacter" type="Sprite2D" parent="CharacterPivot/ReactionMotion"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.62, 0.62)
+texture = ExtResource("5_headpat_01")
+
+[node name="CrystalLights" type="Node2D" parent="CharacterPivot"]
+
+[node name="Light1" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(1, 0.12, 0.22, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(-277, -123)
+texture = ExtResource("3_sparkle")
+
+[node name="Light2" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(1, 0.67, 0.12, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(-215, -179)
+texture = ExtResource("3_sparkle")
+
+[node name="Light3" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(0.24, 1, 0.32, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(-181, -237)
+texture = ExtResource("3_sparkle")
+
+[node name="Light4" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(0.18, 0.55, 1, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(-138, -185)
+texture = ExtResource("3_sparkle")
+
+[node name="Light5" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(1, 0.72, 0.16, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(179, -222)
+texture = ExtResource("3_sparkle")
+
+[node name="Light6" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(0.22, 1, 0.36, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(222, -185)
+texture = ExtResource("3_sparkle")
+
+[node name="Light7" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(0.16, 0.58, 1, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(259, -135)
+texture = ExtResource("3_sparkle")
+
+[node name="Light8" type="Sprite2D" parent="CharacterPivot/CrystalLights"]
+visible = false
+modulate = Color(0.66, 0.2, 1, 0.58)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(290, -73)
+texture = ExtResource("3_sparkle")
+
+[node name="CrystalBurst" type="GPUParticles2D" parent="CharacterPivot"]
+material = SubResource("CanvasItemMaterial_add")
+emitting = false
+amount = 18
+texture = ExtResource("3_sparkle")
+lifetime = 0.65
+one_shot = true
+explosiveness = 1.0
+randomness = 0.45
+visibility_rect = Rect2(-140, -140, 280, 280)
+process_material = SubResource("ParticleProcessMaterial_crystal_burst")
+
+[node name="HandPivot" type="Node2D" parent="CharacterPivot"]
+position = Vector2(35, -380)
+
+[node name="Hand" type="Sprite2D" parent="CharacterPivot/HandPivot"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("6_hand")
+
+[node name="HighFiveHandPivot" type="Node2D" parent="CharacterPivot"]
+position = Vector2(-35, 25)
+
+[node name="Hand" type="Sprite2D" parent="CharacterPivot/HighFiveHandPivot"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_highfive_hand_fade")
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("7_highfive_hand")
+
+[node name="HighFiveImpact" type="Sprite2D" parent="CharacterPivot"]
+visible = false
+modulate = Color(1, 0.72, 0.88, 0)
+material = SubResource("CanvasItemMaterial_add")
+position = Vector2(-144, -340)
+texture = ExtResource("3_sparkle")
+
+[node name="InteractionZones" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HeadPatButton" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1335.0
+offset_top = 40.0
+offset_right = 1725.0
+offset_bottom = 365.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton1" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1213.0
+offset_top = 372.0
+offset_right = 1303.0
+offset_bottom = 472.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton2" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1275.0
+offset_top = 316.0
+offset_right = 1365.0
+offset_bottom = 416.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton3" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1309.0
+offset_top = 258.0
+offset_right = 1399.0
+offset_bottom = 358.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton4" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1352.0
+offset_top = 310.0
+offset_right = 1442.0
+offset_bottom = 410.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton5" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1669.0
+offset_top = 273.0
+offset_right = 1759.0
+offset_bottom = 373.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton6" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1712.0
+offset_top = 310.0
+offset_right = 1802.0
+offset_bottom = 410.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton7" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1749.0
+offset_top = 360.0
+offset_right = 1839.0
+offset_bottom = 460.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="CrystalButton8" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1780.0
+offset_top = 422.0
+offset_right = 1870.0
+offset_bottom = 522.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="HighFiveButton" type="Button" parent="InteractionZones"]
+layout_mode = 0
+offset_left = 1320.0
+offset_top = 390.0
+offset_right = 1515.0
+offset_bottom = 585.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_main")
+}
+autoplay = "Idle"
