@@ -80,14 +80,14 @@ internal static class CombatManagerEndCombatPatch
 {
     private static MethodBase TargetMethod()
     {
-        // Normal gameplay calls the private EndCombatInternal(CombatTurnState)
-        // overload directly. CombatTurnState is internal to sts2, so select the
-        // overload by reflection instead of naming its inaccessible parameter type.
-        return typeof(CombatManager)
-            .GetMethods(BindingFlags.Instance | BindingFlags.NonPublic)
-            .Single(method =>
-                method.Name == "EndCombatInternal"
-                && method.GetParameters().Length == 1);
+        // The stable build has EndCombatInternal(), while beta passes a turn
+        // state. Select whichever signature the running game actually exposes.
+        var methods = typeof(CombatManager)
+            .GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+            .Where(method => method.Name == "EndCombatInternal")
+            .ToArray();
+        return methods.SingleOrDefault(method => method.GetParameters().Length == 1)
+            ?? methods.Single(method => method.GetParameters().Length == 0);
     }
 
     private static void Prefix()
